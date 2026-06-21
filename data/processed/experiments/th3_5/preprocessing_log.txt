@@ -1,0 +1,7 @@
+=== THONG KE - threshold=3.5 ===
+K-core: 5 | Test ratio: 0.2 | Seed: 2026
+So users: 101
+So items: 4001
+Interactions train: 53121
+Interactions test: 13237
+Density: 0.164211
