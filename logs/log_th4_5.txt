@@ -1,0 +1,1022 @@
+9.6s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.6s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.6s 3 0.00s - to python to disable frozen modules.
+9.6s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.4s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.4s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.4s 7 0.00s - to python to disable frozen modules.
+10.4s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.7s 9 [?25l     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/64.4 kB[0m [31m?[0m eta [36m-:--:--[0m[2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m64.4/64.4 kB[0m [31m2.0 MB/s[0m eta [36m0:00:00[0m
+14.9s 10 [?25h[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/1.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━[0m [32m1.2/1.3 MB[0m [31m37.6 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/1.3 MB[0m [31m21.4 MB/s[0m eta [36m0:00:00[0m
+18.9s 11 [?25hpython3: can't open file '/kaggle/working/train_lightgcn_pyg.py': [Errno 2] No such file or directory
+45.4s 12 [Data] num_users=101, num_items=3709, device=cpu
+45.4s 13 [Data] 25727 interactions for training, 6382 for testing
+47.3s 14 Epoch[1/1000] loss=0.6930 time=1.71s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0153
+48.7s 15 Epoch[2/1000] loss=0.6925 time=1.37s
+49.9s 16 Epoch[3/1000] loss=0.6914 time=1.24s
+51.3s 17 Epoch[4/1000] loss=0.6895 time=1.42s
+52.7s 18 Epoch[5/1000] loss=0.6865 time=1.34s
+54.1s 19 Epoch[6/1000] loss=0.6824 time=1.44s
+55.3s 20 Epoch[7/1000] loss=0.6771 time=1.19s
+56.6s 21 Epoch[8/1000] loss=0.6708 time=1.27s
+57.8s 22 Epoch[9/1000] loss=0.6636 time=1.25s
+58.9s 23 Epoch[10/1000] loss=0.6556 time=1.12s
+60.1s 24 Epoch[11/1000] loss=0.6473 time=1.18s | [TEST] Recall@20=0.0056 Precision@20=0.0173 NDCG@20=0.0164
+61.4s 25 Epoch[12/1000] loss=0.6378 time=1.28s
+62.8s 26 Epoch[13/1000] loss=0.6289 time=1.40s
+64.5s 27 Epoch[14/1000] loss=0.6194 time=1.67s
+65.7s 28 Epoch[15/1000] loss=0.6099 time=1.20s
+67.0s 29 Epoch[16/1000] loss=0.5996 time=1.33s
+68.4s 30 Epoch[17/1000] loss=0.5891 time=1.35s
+69.8s 31 Epoch[18/1000] loss=0.5776 time=1.46s
+71.4s 32 Epoch[19/1000] loss=0.5685 time=1.53s
+72.7s 33 Epoch[20/1000] loss=0.5576 time=1.33s
+74.1s 34 Epoch[21/1000] loss=0.5469 time=1.36s | [TEST] Recall@20=0.0061 Precision@20=0.0188 NDCG@20=0.0190
+75.4s 35 Epoch[22/1000] loss=0.5357 time=1.28s
+76.6s 36 Epoch[23/1000] loss=0.5256 time=1.26s
+78.0s 37 Epoch[24/1000] loss=0.5145 time=1.32s
+79.3s 38 Epoch[25/1000] loss=0.5037 time=1.37s
+80.8s 39 Epoch[26/1000] loss=0.4936 time=1.45s
+82.3s 40 Epoch[27/1000] loss=0.4834 time=1.53s
+83.6s 41 Epoch[28/1000] loss=0.4726 time=1.32s
+85.1s 42 Epoch[29/1000] loss=0.4611 time=1.44s
+86.4s 43 Epoch[30/1000] loss=0.4516 time=1.37s
+87.7s 44 Epoch[31/1000] loss=0.4392 time=1.22s | [TEST] Recall@20=0.0062 Precision@20=0.0193 NDCG@20=0.0220
+89.1s 45 Epoch[32/1000] loss=0.4331 time=1.44s
+90.5s 46 Epoch[33/1000] loss=0.4207 time=1.36s
+91.7s 47 Epoch[34/1000] loss=0.4121 time=1.21s
+93.0s 48 Epoch[35/1000] loss=0.4019 time=1.28s
+94.2s 49 Epoch[36/1000] loss=0.3930 time=1.18s
+95.5s 50 Epoch[37/1000] loss=0.3830 time=1.31s
+96.8s 51 Epoch[38/1000] loss=0.3740 time=1.32s
+98.0s 52 Epoch[39/1000] loss=0.3662 time=1.23s
+99.3s 53 Epoch[40/1000] loss=0.3586 time=1.28s
+100.7s 54 Epoch[41/1000] loss=0.3481 time=1.36s | [TEST] Recall@20=0.0068 Precision@20=0.0213 NDCG@20=0.0234
+102.0s 55 Epoch[42/1000] loss=0.3434 time=1.27s
+103.2s 56 Epoch[43/1000] loss=0.3354 time=1.21s
+104.5s 57 Epoch[44/1000] loss=0.3289 time=1.28s
+105.8s 58 Epoch[45/1000] loss=0.3212 time=1.29s
+107.0s 59 Epoch[46/1000] loss=0.3165 time=1.24s
+108.4s 60 Epoch[47/1000] loss=0.3094 time=1.36s
+109.8s 61 Epoch[48/1000] loss=0.3004 time=1.39s
+111.0s 62 Epoch[49/1000] loss=0.2944 time=1.27s
+112.4s 63 Epoch[50/1000] loss=0.2889 time=1.34s
+113.9s 64 Epoch[51/1000] loss=0.2832 time=1.52s | [TEST] Recall@20=0.0060 Precision@20=0.0188 NDCG@20=0.0225
+115.2s 65 Epoch[52/1000] loss=0.2779 time=1.29s
+116.8s 66 Epoch[53/1000] loss=0.2728 time=1.53s
+118.1s 67 Epoch[54/1000] loss=0.2683 time=1.33s
+119.5s 68 Epoch[55/1000] loss=0.2624 time=1.42s
+120.9s 69 Epoch[56/1000] loss=0.2578 time=1.35s
+122.2s 70 Epoch[57/1000] loss=0.2526 time=1.31s
+123.5s 71 Epoch[58/1000] loss=0.2507 time=1.30s
+124.9s 72 Epoch[59/1000] loss=0.2434 time=1.45s
+126.2s 73 Epoch[60/1000] loss=0.2374 time=1.32s
+127.6s 74 Epoch[61/1000] loss=0.2353 time=1.33s | [TEST] Recall@20=0.0059 Precision@20=0.0183 NDCG@20=0.0221
+128.9s 75 Epoch[62/1000] loss=0.2314 time=1.25s
+130.1s 76 Epoch[63/1000] loss=0.2255 time=1.20s
+131.4s 77 Epoch[64/1000] loss=0.2240 time=1.31s
+132.7s 78 Epoch[65/1000] loss=0.2219 time=1.33s
+134.1s 79 Epoch[66/1000] loss=0.2164 time=1.35s
+135.5s 80 Epoch[67/1000] loss=0.2133 time=1.39s
+136.9s 81 Epoch[68/1000] loss=0.2074 time=1.45s
+138.3s 82 Epoch[69/1000] loss=0.2053 time=1.37s
+139.6s 83 Epoch[70/1000] loss=0.2009 time=1.29s
+141.0s 84 Epoch[71/1000] loss=0.2018 time=1.40s | [TEST] Recall@20=0.0063 Precision@20=0.0198 NDCG@20=0.0222
+142.4s 85 Epoch[72/1000] loss=0.1952 time=1.34s
+143.4s 86 Epoch[73/1000] loss=0.1924 time=1.08s
+144.5s 87 Epoch[74/1000] loss=0.1910 time=1.07s
+145.6s 88 Epoch[75/1000] loss=0.1882 time=1.13s
+146.7s 89 Epoch[76/1000] loss=0.1867 time=1.08s
+147.8s 90 Epoch[77/1000] loss=0.1837 time=1.08s
+148.9s 91 Epoch[78/1000] loss=0.1809 time=1.07s
+149.9s 92 Epoch[79/1000] loss=0.1796 time=1.07s
+151.0s 93 Epoch[80/1000] loss=0.1742 time=1.10s
+152.2s 94 Epoch[81/1000] loss=0.1725 time=1.12s | [TEST] Recall@20=0.0063 Precision@20=0.0198 NDCG@20=0.0208
+153.3s 95 Epoch[82/1000] loss=0.1709 time=1.07s
+154.5s 96 Epoch[83/1000] loss=0.1714 time=1.27s
+156.0s 97 Epoch[84/1000] loss=0.1670 time=1.41s
+157.4s 98 Epoch[85/1000] loss=0.1641 time=1.41s
+159.0s 99 Epoch[86/1000] loss=0.1637 time=1.64s
+160.4s 100 Epoch[87/1000] loss=0.1614 time=1.41s
+162.0s 101 Epoch[88/1000] loss=0.1591 time=1.61s
+163.6s 102 Epoch[89/1000] loss=0.1588 time=1.54s
+165.0s 103 Epoch[90/1000] loss=0.1576 time=1.47s
+166.5s 104 Epoch[91/1000] loss=0.1541 time=1.38s | [TEST] Recall@20=0.0056 Precision@20=0.0178 NDCG@20=0.0203
+167.8s 105 Epoch[92/1000] loss=0.1516 time=1.38s
+169.3s 106 Epoch[93/1000] loss=0.1500 time=1.41s
+170.7s 107 Epoch[94/1000] loss=0.1501 time=1.41s
+172.1s 108 Epoch[95/1000] loss=0.1493 time=1.44s
+173.5s 109 Epoch[96/1000] loss=0.1469 time=1.36s
+174.8s 110 Epoch[97/1000] loss=0.1440 time=1.38s
+176.0s 111 Epoch[98/1000] loss=0.1442 time=1.18s
+177.4s 112 Epoch[99/1000] loss=0.1419 time=1.38s
+178.7s 113 Epoch[100/1000] loss=0.1418 time=1.31s
+180.0s 114 Epoch[101/1000] loss=0.1388 time=1.20s | [TEST] Recall@20=0.0054 Precision@20=0.0173 NDCG@20=0.0188
+181.4s 115 Epoch[102/1000] loss=0.1392 time=1.40s
+182.8s 116 Epoch[103/1000] loss=0.1352 time=1.47s
+184.1s 117 Epoch[104/1000] loss=0.1361 time=1.32s
+185.5s 118 Epoch[105/1000] loss=0.1355 time=1.30s
+186.8s 119 Epoch[106/1000] loss=0.1323 time=1.37s
+188.1s 120 Epoch[107/1000] loss=0.1322 time=1.30s
+189.6s 121 Epoch[108/1000] loss=0.1317 time=1.46s
+191.1s 122 Epoch[109/1000] loss=0.1314 time=1.49s
+192.8s 123 Epoch[110/1000] loss=0.1283 time=1.75s
+194.4s 124 Epoch[111/1000] loss=0.1267 time=1.55s | [TEST] Recall@20=0.0063 Precision@20=0.0198 NDCG@20=0.0206
+196.0s 125 Epoch[112/1000] loss=0.1259 time=1.57s
+197.5s 126 Epoch[113/1000] loss=0.1257 time=1.50s
+199.0s 127 Epoch[114/1000] loss=0.1232 time=1.48s
+200.2s 128 Epoch[115/1000] loss=0.1227 time=1.21s
+201.6s 129 Epoch[116/1000] loss=0.1223 time=1.43s
+203.1s 130 Epoch[117/1000] loss=0.1193 time=1.42s
+204.5s 131 Epoch[118/1000] loss=0.1212 time=1.47s
+205.9s 132 Epoch[119/1000] loss=0.1221 time=1.35s
+207.3s 133 Epoch[120/1000] loss=0.1174 time=1.42s
+208.9s 134 Epoch[121/1000] loss=0.1155 time=1.59s | [TEST] Recall@20=0.0058 Precision@20=0.0183 NDCG@20=0.0187
+210.5s 135 Epoch[122/1000] loss=0.1164 time=1.53s
+211.8s 136 Epoch[123/1000] loss=0.1196 time=1.39s
+213.2s 137 Epoch[124/1000] loss=0.1154 time=1.32s
+214.4s 138 Epoch[125/1000] loss=0.1151 time=1.18s
+215.6s 139 Epoch[126/1000] loss=0.1154 time=1.29s
+217.0s 140 Epoch[127/1000] loss=0.1151 time=1.35s
+218.3s 141 Epoch[128/1000] loss=0.1132 time=1.32s
+219.7s 142 Epoch[129/1000] loss=0.1123 time=1.36s
+221.1s 143 Epoch[130/1000] loss=0.1135 time=1.42s
+222.5s 144 Epoch[131/1000] loss=0.1115 time=1.33s | [TEST] Recall@20=0.0066 Precision@20=0.0208 NDCG@20=0.0211
+223.8s 145 Epoch[132/1000] loss=0.1102 time=1.32s
+225.1s 146 Epoch[133/1000] loss=0.1081 time=1.31s
+226.5s 147 Epoch[134/1000] loss=0.1077 time=1.41s
+227.9s 148 Epoch[135/1000] loss=0.1093 time=1.44s
+229.5s 149 Epoch[136/1000] loss=0.1091 time=1.56s
+230.7s 150 Epoch[137/1000] loss=0.1091 time=1.17s
+232.1s 151 Epoch[138/1000] loss=0.1080 time=1.39s
+233.5s 152 Epoch[139/1000] loss=0.1055 time=1.47s
+235.0s 153 Epoch[140/1000] loss=0.1056 time=1.44s
+236.5s 154 Epoch[141/1000] loss=0.1048 time=1.46s | [TEST] Recall@20=0.0066 Precision@20=0.0208 NDCG@20=0.0209
+237.9s 155 Epoch[142/1000] loss=0.1055 time=1.41s
+239.3s 156 Epoch[143/1000] loss=0.1058 time=1.43s
+240.9s 157 Epoch[144/1000] loss=0.1028 time=1.61s
+242.6s 158 Epoch[145/1000] loss=0.1032 time=1.71s
+244.2s 159 Epoch[146/1000] loss=0.1018 time=1.55s
+245.4s 160 Epoch[147/1000] loss=0.1024 time=1.23s
+247.0s 161 Epoch[148/1000] loss=0.1017 time=1.55s
+248.6s 162 Epoch[149/1000] loss=0.1009 time=1.59s
+250.2s 163 Epoch[150/1000] loss=0.1005 time=1.64s
+251.7s 164 Epoch[151/1000] loss=0.1012 time=1.44s | [TEST] Recall@20=0.0064 Precision@20=0.0203 NDCG@20=0.0209
+253.2s 165 Epoch[152/1000] loss=0.0984 time=1.51s
+254.5s 166 Epoch[153/1000] loss=0.0998 time=1.24s
+255.7s 167 Epoch[154/1000] loss=0.1023 time=1.25s
+257.0s 168 Epoch[155/1000] loss=0.0947 time=1.26s
+258.3s 169 Epoch[156/1000] loss=0.1004 time=1.29s
+259.6s 170 Epoch[157/1000] loss=0.0940 time=1.31s
+260.8s 171 Epoch[158/1000] loss=0.0961 time=1.25s
+262.3s 172 Epoch[159/1000] loss=0.0970 time=1.45s
+263.7s 173 Epoch[160/1000] loss=0.0959 time=1.41s
+265.0s 174 Epoch[161/1000] loss=0.0956 time=1.26s | [TEST] Recall@20=0.0064 Precision@20=0.0203 NDCG@20=0.0202
+266.3s 175 Epoch[162/1000] loss=0.0961 time=1.28s
+267.7s 176 Epoch[163/1000] loss=0.0962 time=1.49s
+269.3s 177 Epoch[164/1000] loss=0.0970 time=1.56s
+270.6s 178 Epoch[165/1000] loss=0.0945 time=1.33s
+272.0s 179 Epoch[166/1000] loss=0.0942 time=1.32s
+273.3s 180 Epoch[167/1000] loss=0.0925 time=1.31s
+274.5s 181 Epoch[168/1000] loss=0.0926 time=1.28s
+275.7s 182 Epoch[169/1000] loss=0.0934 time=1.19s
+277.0s 183 Epoch[170/1000] loss=0.0932 time=1.24s
+278.3s 184 Epoch[171/1000] loss=0.0945 time=1.26s | [TEST] Recall@20=0.0060 Precision@20=0.0188 NDCG@20=0.0204
+279.7s 185 Epoch[172/1000] loss=0.0919 time=1.38s
+281.3s 186 Epoch[173/1000] loss=0.0938 time=1.58s
+282.5s 187 Epoch[174/1000] loss=0.0907 time=1.29s
+283.8s 188 Epoch[175/1000] loss=0.0909 time=1.27s
+285.1s 189 Epoch[176/1000] loss=0.0897 time=1.28s
+286.3s 190 Epoch[177/1000] loss=0.0888 time=1.23s
+287.6s 191 Epoch[178/1000] loss=0.0900 time=1.25s
+288.8s 192 Epoch[179/1000] loss=0.0905 time=1.20s
+290.1s 193 Epoch[180/1000] loss=0.0913 time=1.32s
+291.6s 194 Epoch[181/1000] loss=0.0906 time=1.42s | [TEST] Recall@20=0.0062 Precision@20=0.0193 NDCG@20=0.0206
+292.8s 195 Epoch[182/1000] loss=0.0911 time=1.23s
+294.1s 196 Epoch[183/1000] loss=0.0903 time=1.32s
+295.4s 197 Epoch[184/1000] loss=0.0872 time=1.31s
+296.7s 198 Epoch[185/1000] loss=0.0876 time=1.24s
+298.0s 199 Epoch[186/1000] loss=0.0870 time=1.32s
+299.2s 200 Epoch[187/1000] loss=0.0876 time=1.25s
+300.5s 201 Epoch[188/1000] loss=0.0866 time=1.27s
+301.6s 202 Epoch[189/1000] loss=0.0877 time=1.11s
+302.8s 203 Epoch[190/1000] loss=0.0879 time=1.20s
+303.9s 204 Epoch[191/1000] loss=0.0881 time=1.07s | [TEST] Recall@20=0.0063 Precision@20=0.0198 NDCG@20=0.0214
+305.2s 205 Epoch[192/1000] loss=0.0866 time=1.23s
+306.4s 206 Epoch[193/1000] loss=0.0855 time=1.19s
+307.6s 207 Epoch[194/1000] loss=0.0870 time=1.26s
+308.9s 208 Epoch[195/1000] loss=0.0852 time=1.29s
+310.3s 209 Epoch[196/1000] loss=0.0864 time=1.36s
+311.6s 210 Epoch[197/1000] loss=0.0878 time=1.29s
+312.8s 211 Epoch[198/1000] loss=0.0867 time=1.22s
+314.0s 212 Epoch[199/1000] loss=0.0845 time=1.24s
+315.3s 213 Epoch[200/1000] loss=0.0844 time=1.31s
+316.8s 214 Epoch[201/1000] loss=0.0842 time=1.40s | [TEST] Recall@20=0.0059 Precision@20=0.0183 NDCG@20=0.0204
+318.1s 215 Epoch[202/1000] loss=0.0846 time=1.31s
+319.4s 216 Epoch[203/1000] loss=0.0852 time=1.33s
+320.7s 217 Epoch[204/1000] loss=0.0850 time=1.31s
+321.9s 218 Epoch[205/1000] loss=0.0840 time=1.13s
+323.2s 219 Epoch[206/1000] loss=0.0828 time=1.35s
+324.5s 220 Epoch[207/1000] loss=0.0861 time=1.28s
+325.8s 221 Epoch[208/1000] loss=0.0850 time=1.33s
+327.1s 222 Epoch[209/1000] loss=0.0801 time=1.29s
+328.4s 223 Epoch[210/1000] loss=0.0832 time=1.28s
+329.7s 224 Epoch[211/1000] loss=0.0823 time=1.25s | [TEST] Recall@20=0.0055 Precision@20=0.0173 NDCG@20=0.0199
+331.0s 225 Epoch[212/1000] loss=0.0835 time=1.29s
+332.3s 226 Epoch[213/1000] loss=0.0843 time=1.37s
+333.5s 227 Epoch[214/1000] loss=0.0812 time=1.12s
+334.6s 228 Epoch[215/1000] loss=0.0809 time=1.14s
+335.7s 229 Epoch[216/1000] loss=0.0819 time=1.13s
+336.8s 230 Epoch[217/1000] loss=0.0835 time=1.11s
+337.9s 231 Epoch[218/1000] loss=0.0807 time=1.06s
+339.0s 232 Epoch[219/1000] loss=0.0827 time=1.11s
+340.2s 233 Epoch[220/1000] loss=0.0805 time=1.15s
+341.3s 234 Epoch[221/1000] loss=0.0795 time=1.14s | [TEST] Recall@20=0.0055 Precision@20=0.0173 NDCG@20=0.0199
+342.4s 235 Epoch[222/1000] loss=0.0798 time=1.07s
+343.8s 236 Epoch[223/1000] loss=0.0834 time=1.42s
+345.2s 237 Epoch[224/1000] loss=0.0805 time=1.37s
+346.5s 238 Epoch[225/1000] loss=0.0806 time=1.32s
+348.0s 239 Epoch[226/1000] loss=0.0789 time=1.48s
+349.4s 240 Epoch[227/1000] loss=0.0785 time=1.35s
+350.7s 241 Epoch[228/1000] loss=0.0824 time=1.32s
+352.1s 242 Epoch[229/1000] loss=0.0796 time=1.45s
+353.4s 243 Epoch[230/1000] loss=0.0806 time=1.24s
+354.6s 244 Epoch[231/1000] loss=0.0818 time=1.20s | [TEST] Recall@20=0.0056 Precision@20=0.0173 NDCG@20=0.0191
+355.8s 245 Epoch[232/1000] loss=0.0805 time=1.23s
+357.1s 246 Epoch[233/1000] loss=0.0785 time=1.24s
+358.5s 247 Epoch[234/1000] loss=0.0780 time=1.37s
+359.9s 248 Epoch[235/1000] loss=0.0801 time=1.44s
+361.3s 249 Epoch[236/1000] loss=0.0799 time=1.41s
+362.7s 250 Epoch[237/1000] loss=0.0795 time=1.36s
+364.0s 251 Epoch[238/1000] loss=0.0775 time=1.32s
+365.4s 252 Epoch[239/1000] loss=0.0790 time=1.40s
+366.7s 253 Epoch[240/1000] loss=0.0769 time=1.26s
+368.1s 254 Epoch[241/1000] loss=0.0776 time=1.36s | [TEST] Recall@20=0.0055 Precision@20=0.0173 NDCG@20=0.0188
+369.3s 255 Epoch[242/1000] loss=0.0768 time=1.26s
+370.7s 256 Epoch[243/1000] loss=0.0799 time=1.34s
+372.0s 257 Epoch[244/1000] loss=0.0807 time=1.30s
+373.4s 258 Epoch[245/1000] loss=0.0786 time=1.42s
+374.8s 259 Epoch[246/1000] loss=0.0800 time=1.37s
+376.0s 260 Epoch[247/1000] loss=0.0797 time=1.28s
+377.5s 261 Epoch[248/1000] loss=0.0771 time=1.43s
+379.0s 262 Epoch[249/1000] loss=0.0763 time=1.50s
+380.5s 263 Epoch[250/1000] loss=0.0765 time=1.58s
+382.1s 264 Epoch[251/1000] loss=0.0784 time=1.48s | [TEST] Recall@20=0.0051 Precision@20=0.0158 NDCG@20=0.0179
+383.4s 265 Epoch[252/1000] loss=0.0776 time=1.34s
+384.9s 266 Epoch[253/1000] loss=0.0769 time=1.45s
+386.2s 267 Epoch[254/1000] loss=0.0754 time=1.30s
+387.5s 268 Epoch[255/1000] loss=0.0795 time=1.36s
+388.9s 269 Epoch[256/1000] loss=0.0777 time=1.38s
+390.3s 270 Epoch[257/1000] loss=0.0763 time=1.36s
+391.5s 271 Epoch[258/1000] loss=0.0758 time=1.23s
+392.8s 272 Epoch[259/1000] loss=0.0786 time=1.28s
+394.1s 273 Epoch[260/1000] loss=0.0756 time=1.27s
+395.7s 274 Epoch[261/1000] loss=0.0754 time=1.52s | [TEST] Recall@20=0.0055 Precision@20=0.0173 NDCG@20=0.0189
+397.2s 275 Epoch[262/1000] loss=0.0749 time=1.57s
+398.7s 276 Epoch[263/1000] loss=0.0766 time=1.48s
+400.0s 277 Epoch[264/1000] loss=0.0768 time=1.27s
+401.4s 278 Epoch[265/1000] loss=0.0749 time=1.44s
+402.7s 279 Epoch[266/1000] loss=0.0744 time=1.29s
+404.1s 280 Epoch[267/1000] loss=0.0769 time=1.38s
+405.5s 281 Epoch[268/1000] loss=0.0741 time=1.39s
+406.8s 282 Epoch[269/1000] loss=0.0766 time=1.30s
+408.1s 283 Epoch[270/1000] loss=0.0760 time=1.35s
+409.8s 284 Epoch[271/1000] loss=0.0763 time=1.61s | [TEST] Recall@20=0.0052 Precision@20=0.0163 NDCG@20=0.0175
+411.3s 285 Epoch[272/1000] loss=0.0752 time=1.55s
+412.7s 286 Epoch[273/1000] loss=0.0761 time=1.36s
+414.1s 287 Epoch[274/1000] loss=0.0762 time=1.39s
+415.6s 288 Epoch[275/1000] loss=0.0718 time=1.51s
+416.9s 289 Epoch[276/1000] loss=0.0751 time=1.29s
+418.2s 290 Epoch[277/1000] loss=0.0753 time=1.27s
+419.5s 291 Epoch[278/1000] loss=0.0762 time=1.30s
+420.6s 292 Epoch[279/1000] loss=0.0731 time=1.14s
+421.9s 293 Epoch[280/1000] loss=0.0755 time=1.28s
+423.2s 294 Epoch[281/1000] loss=0.0767 time=1.21s | [TEST] Recall@20=0.0051 Precision@20=0.0158 NDCG@20=0.0172
+424.4s 295 Epoch[282/1000] loss=0.0740 time=1.28s
+425.6s 296 Epoch[283/1000] loss=0.0746 time=1.19s
+426.8s 297 Epoch[284/1000] loss=0.0727 time=1.15s
+428.0s 298 Epoch[285/1000] loss=0.0729 time=1.22s
+429.3s 299 Epoch[286/1000] loss=0.0730 time=1.25s
+430.7s 300 Epoch[287/1000] loss=0.0732 time=1.44s
+432.0s 301 Epoch[288/1000] loss=0.0742 time=1.32s
+433.5s 302 Epoch[289/1000] loss=0.0721 time=1.44s
+434.8s 303 Epoch[290/1000] loss=0.0747 time=1.36s
+436.3s 304 Epoch[291/1000] loss=0.0740 time=1.39s | [TEST] Recall@20=0.0049 Precision@20=0.0153 NDCG@20=0.0177
+437.5s 305 Epoch[292/1000] loss=0.0727 time=1.21s
+439.0s 306 Epoch[293/1000] loss=0.0716 time=1.55s
+440.3s 307 Epoch[294/1000] loss=0.0718 time=1.28s
+441.7s 308 Epoch[295/1000] loss=0.0739 time=1.40s
+443.0s 309 Epoch[296/1000] loss=0.0734 time=1.32s
+444.4s 310 Epoch[297/1000] loss=0.0731 time=1.36s
+445.8s 311 Epoch[298/1000] loss=0.0705 time=1.46s
+447.1s 312 Epoch[299/1000] loss=0.0737 time=1.29s
+448.6s 313 Epoch[300/1000] loss=0.0737 time=1.49s
+450.2s 314 Epoch[301/1000] loss=0.0735 time=1.57s | [TEST] Recall@20=0.0051 Precision@20=0.0158 NDCG@20=0.0168
+451.6s 315 Epoch[302/1000] loss=0.0723 time=1.35s
+452.8s 316 Epoch[303/1000] loss=0.0705 time=1.24s
+454.0s 317 Epoch[304/1000] loss=0.0726 time=1.25s
+455.4s 318 Epoch[305/1000] loss=0.0733 time=1.36s
+456.8s 319 Epoch[306/1000] loss=0.0723 time=1.35s
+458.1s 320 Epoch[307/1000] loss=0.0724 time=1.36s
+459.7s 321 Epoch[308/1000] loss=0.0720 time=1.56s
+461.2s 322 Epoch[309/1000] loss=0.0742 time=1.49s
+462.6s 323 Epoch[310/1000] loss=0.0702 time=1.41s
+463.9s 324 Epoch[311/1000] loss=0.0726 time=1.33s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0159
+465.4s 325 Epoch[312/1000] loss=0.0701 time=1.42s
+466.7s 326 Epoch[313/1000] loss=0.0721 time=1.30s
+468.1s 327 Epoch[314/1000] loss=0.0718 time=1.48s
+469.5s 328 Epoch[315/1000] loss=0.0720 time=1.33s
+470.9s 329 Epoch[316/1000] loss=0.0710 time=1.39s
+472.3s 330 Epoch[317/1000] loss=0.0711 time=1.42s
+473.7s 331 Epoch[318/1000] loss=0.0722 time=1.45s
+475.3s 332 Epoch[319/1000] loss=0.0725 time=1.54s
+476.8s 333 Epoch[320/1000] loss=0.0691 time=1.50s
+478.1s 334 Epoch[321/1000] loss=0.0694 time=1.27s | [TEST] Recall@20=0.0054 Precision@20=0.0168 NDCG@20=0.0174
+479.3s 335 Epoch[322/1000] loss=0.0684 time=1.22s
+480.7s 336 Epoch[323/1000] loss=0.0724 time=1.33s
+482.1s 337 Epoch[324/1000] loss=0.0704 time=1.43s
+483.3s 338 Epoch[325/1000] loss=0.0724 time=1.25s
+484.6s 339 Epoch[326/1000] loss=0.0722 time=1.28s
+485.9s 340 Epoch[327/1000] loss=0.0705 time=1.26s
+487.2s 341 Epoch[328/1000] loss=0.0706 time=1.31s
+488.3s 342 Epoch[329/1000] loss=0.0706 time=1.15s
+489.8s 343 Epoch[330/1000] loss=0.0714 time=1.48s
+491.0s 344 Epoch[331/1000] loss=0.0700 time=1.16s | [TEST] Recall@20=0.0048 Precision@20=0.0149 NDCG@20=0.0154
+492.2s 345 Epoch[332/1000] loss=0.0714 time=1.20s
+493.4s 346 Epoch[333/1000] loss=0.0716 time=1.20s
+494.7s 347 Epoch[334/1000] loss=0.0692 time=1.27s
+495.8s 348 Epoch[335/1000] loss=0.0713 time=1.09s
+496.9s 349 Epoch[336/1000] loss=0.0719 time=1.11s
+498.1s 350 Epoch[337/1000] loss=0.0718 time=1.27s
+499.6s 351 Epoch[338/1000] loss=0.0700 time=1.44s
+501.1s 352 Epoch[339/1000] loss=0.0717 time=1.56s
+502.7s 353 Epoch[340/1000] loss=0.0716 time=1.52s
+504.0s 354 Epoch[341/1000] loss=0.0724 time=1.30s | [TEST] Recall@20=0.0049 Precision@20=0.0153 NDCG@20=0.0163
+505.3s 355 Epoch[342/1000] loss=0.0713 time=1.27s
+506.6s 356 Epoch[343/1000] loss=0.0680 time=1.36s
+507.8s 357 Epoch[344/1000] loss=0.0696 time=1.18s
+509.1s 358 Epoch[345/1000] loss=0.0727 time=1.26s
+510.5s 359 Epoch[346/1000] loss=0.0686 time=1.44s
+512.0s 360 Epoch[347/1000] loss=0.0704 time=1.48s
+513.3s 361 Epoch[348/1000] loss=0.0703 time=1.32s
+514.6s 362 Epoch[349/1000] loss=0.0680 time=1.28s
+516.0s 363 Epoch[350/1000] loss=0.0707 time=1.37s
+517.3s 364 Epoch[351/1000] loss=0.0689 time=1.32s | [TEST] Recall@20=0.0051 Precision@20=0.0158 NDCG@20=0.0166
+518.7s 365 Epoch[352/1000] loss=0.0697 time=1.35s
+520.1s 366 Epoch[353/1000] loss=0.0689 time=1.41s
+521.2s 367 Epoch[354/1000] loss=0.0710 time=1.15s
+522.4s 368 Epoch[355/1000] loss=0.0683 time=1.14s
+523.4s 369 Epoch[356/1000] loss=0.0688 time=1.03s
+524.4s 370 Epoch[357/1000] loss=0.0683 time=1.03s
+525.5s 371 Epoch[358/1000] loss=0.0693 time=1.03s
+526.8s 372 Epoch[359/1000] loss=0.0721 time=1.32s
+528.2s 373 Epoch[360/1000] loss=0.0687 time=1.43s
+529.6s 374 Epoch[361/1000] loss=0.0693 time=1.35s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0157
+531.0s 375 Epoch[362/1000] loss=0.0705 time=1.38s
+532.1s 376 Epoch[363/1000] loss=0.0696 time=1.15s
+533.5s 377 Epoch[364/1000] loss=0.0692 time=1.37s
+534.8s 378 Epoch[365/1000] loss=0.0702 time=1.31s
+536.1s 379 Epoch[366/1000] loss=0.0720 time=1.23s
+537.3s 380 Epoch[367/1000] loss=0.0667 time=1.24s
+538.5s 381 Epoch[368/1000] loss=0.0705 time=1.19s
+539.7s 382 Epoch[369/1000] loss=0.0689 time=1.26s
+540.9s 383 Epoch[370/1000] loss=0.0703 time=1.11s
+542.2s 384 Epoch[371/1000] loss=0.0687 time=1.24s | [TEST] Recall@20=0.0051 Precision@20=0.0158 NDCG@20=0.0165
+543.4s 385 Epoch[372/1000] loss=0.0678 time=1.26s
+544.6s 386 Epoch[373/1000] loss=0.0705 time=1.18s
+545.9s 387 Epoch[374/1000] loss=0.0692 time=1.34s
+547.1s 388 Epoch[375/1000] loss=0.0660 time=1.13s
+548.2s 389 Epoch[376/1000] loss=0.0695 time=1.17s
+549.5s 390 Epoch[377/1000] loss=0.0686 time=1.28s
+550.7s 391 Epoch[378/1000] loss=0.0699 time=1.20s
+552.2s 392 Epoch[379/1000] loss=0.0685 time=1.54s
+553.8s 393 Epoch[380/1000] loss=0.0701 time=1.53s
+555.0s 394 Epoch[381/1000] loss=0.0695 time=1.15s | [TEST] Recall@20=0.0050 Precision@20=0.0153 NDCG@20=0.0163
+556.1s 395 Epoch[382/1000] loss=0.0697 time=1.12s
+557.1s 396 Epoch[383/1000] loss=0.0686 time=1.04s
+558.2s 397 Epoch[384/1000] loss=0.0683 time=1.08s
+559.4s 398 Epoch[385/1000] loss=0.0682 time=1.21s
+560.6s 399 Epoch[386/1000] loss=0.0703 time=1.25s
+561.9s 400 Epoch[387/1000] loss=0.0676 time=1.21s
+563.0s 401 Epoch[388/1000] loss=0.0653 time=1.16s
+564.4s 402 Epoch[389/1000] loss=0.0680 time=1.40s
+565.7s 403 Epoch[390/1000] loss=0.0671 time=1.26s
+567.0s 404 Epoch[391/1000] loss=0.0688 time=1.25s | [TEST] Recall@20=0.0049 Precision@20=0.0153 NDCG@20=0.0162
+568.3s 405 Epoch[392/1000] loss=0.0678 time=1.33s
+569.6s 406 Epoch[393/1000] loss=0.0679 time=1.30s
+571.0s 407 Epoch[394/1000] loss=0.0694 time=1.38s
+572.4s 408 Epoch[395/1000] loss=0.0676 time=1.40s
+573.7s 409 Epoch[396/1000] loss=0.0686 time=1.35s
+575.2s 410 Epoch[397/1000] loss=0.0681 time=1.52s
+576.6s 411 Epoch[398/1000] loss=0.0667 time=1.38s
+578.0s 412 Epoch[399/1000] loss=0.0663 time=1.37s
+579.4s 413 Epoch[400/1000] loss=0.0693 time=1.44s
+580.6s 414 Epoch[401/1000] loss=0.0668 time=1.14s | [TEST] Recall@20=0.0054 Precision@20=0.0168 NDCG@20=0.0167
+581.7s 415 Epoch[402/1000] loss=0.0694 time=1.10s
+582.8s 416 Epoch[403/1000] loss=0.0655 time=1.12s
+583.9s 417 Epoch[404/1000] loss=0.0659 time=1.10s
+585.0s 418 Epoch[405/1000] loss=0.0677 time=1.11s
+586.1s 419 Epoch[406/1000] loss=0.0659 time=1.10s
+587.2s 420 Epoch[407/1000] loss=0.0677 time=1.11s
+588.3s 421 Epoch[408/1000] loss=0.0678 time=1.06s
+589.4s 422 Epoch[409/1000] loss=0.0680 time=1.10s
+590.6s 423 Epoch[410/1000] loss=0.0681 time=1.23s
+591.8s 424 Epoch[411/1000] loss=0.0659 time=1.10s | [TEST] Recall@20=0.0051 Precision@20=0.0158 NDCG@20=0.0164
+593.2s 425 Epoch[412/1000] loss=0.0668 time=1.46s
+594.4s 426 Epoch[413/1000] loss=0.0667 time=1.20s
+595.7s 427 Epoch[414/1000] loss=0.0673 time=1.31s
+596.9s 428 Epoch[415/1000] loss=0.0661 time=1.16s
+597.9s 429 Epoch[416/1000] loss=0.0670 time=1.03s
+599.0s 430 Epoch[417/1000] loss=0.0697 time=1.03s
+600.1s 431 Epoch[418/1000] loss=0.0691 time=1.09s
+601.1s 432 Epoch[419/1000] loss=0.0660 time=1.04s
+602.2s 433 Epoch[420/1000] loss=0.0674 time=1.07s
+603.3s 434 Epoch[421/1000] loss=0.0666 time=1.07s | [TEST] Recall@20=0.0049 Precision@20=0.0153 NDCG@20=0.0164
+604.3s 435 Epoch[422/1000] loss=0.0664 time=1.06s
+605.4s 436 Epoch[423/1000] loss=0.0657 time=1.03s
+606.4s 437 Epoch[424/1000] loss=0.0650 time=1.05s
+607.5s 438 Epoch[425/1000] loss=0.0686 time=1.09s
+608.6s 439 Epoch[426/1000] loss=0.0653 time=1.10s
+609.8s 440 Epoch[427/1000] loss=0.0691 time=1.15s
+610.9s 441 Epoch[428/1000] loss=0.0664 time=1.14s
+612.0s 442 Epoch[429/1000] loss=0.0674 time=1.13s
+613.1s 443 Epoch[430/1000] loss=0.0664 time=1.09s
+614.3s 444 Epoch[431/1000] loss=0.0682 time=1.08s | [TEST] Recall@20=0.0052 Precision@20=0.0163 NDCG@20=0.0168
+615.3s 445 Epoch[432/1000] loss=0.0686 time=1.08s
+616.4s 446 Epoch[433/1000] loss=0.0663 time=1.04s
+617.4s 447 Epoch[434/1000] loss=0.0661 time=1.06s
+618.6s 448 Epoch[435/1000] loss=0.0665 time=1.12s
+619.7s 449 Epoch[436/1000] loss=0.0661 time=1.10s
+620.8s 450 Epoch[437/1000] loss=0.0678 time=1.09s
+622.0s 451 Epoch[438/1000] loss=0.0662 time=1.20s
+623.1s 452 Epoch[439/1000] loss=0.0665 time=1.17s
+624.5s 453 Epoch[440/1000] loss=0.0679 time=1.33s
+625.9s 454 Epoch[441/1000] loss=0.0661 time=1.40s | [TEST] Recall@20=0.0048 Precision@20=0.0149 NDCG@20=0.0159
+627.2s 455 Epoch[442/1000] loss=0.0675 time=1.33s
+628.5s 456 Epoch[443/1000] loss=0.0691 time=1.26s
+629.8s 457 Epoch[444/1000] loss=0.0672 time=1.34s
+631.0s 458 Epoch[445/1000] loss=0.0676 time=1.21s
+632.7s 459 Epoch[446/1000] loss=0.0664 time=1.65s
+634.4s 460 Epoch[447/1000] loss=0.0692 time=1.71s
+635.8s 461 Epoch[448/1000] loss=0.0660 time=1.40s
+637.1s 462 Epoch[449/1000] loss=0.0673 time=1.32s
+638.5s 463 Epoch[450/1000] loss=0.0669 time=1.43s
+640.0s 464 Epoch[451/1000] loss=0.0681 time=1.45s | [TEST] Recall@20=0.0048 Precision@20=0.0149 NDCG@20=0.0148
+641.4s 465 Epoch[452/1000] loss=0.0662 time=1.41s
+642.8s 466 Epoch[453/1000] loss=0.0662 time=1.35s
+643.9s 467 Epoch[454/1000] loss=0.0670 time=1.16s
+645.1s 468 Epoch[455/1000] loss=0.0669 time=1.13s
+646.3s 469 Epoch[456/1000] loss=0.0644 time=1.18s
+647.4s 470 Epoch[457/1000] loss=0.0638 time=1.14s
+648.6s 471 Epoch[458/1000] loss=0.0666 time=1.24s
+649.9s 472 Epoch[459/1000] loss=0.0636 time=1.24s
+650.9s 473 Epoch[460/1000] loss=0.0691 time=1.03s
+652.2s 474 Epoch[461/1000] loss=0.0653 time=1.20s | [TEST] Recall@20=0.0048 Precision@20=0.0149 NDCG@20=0.0147
+653.3s 475 Epoch[462/1000] loss=0.0662 time=1.19s
+654.5s 476 Epoch[463/1000] loss=0.0677 time=1.21s
+655.8s 477 Epoch[464/1000] loss=0.0655 time=1.23s
+657.1s 478 Epoch[465/1000] loss=0.0670 time=1.29s
+658.3s 479 Epoch[466/1000] loss=0.0667 time=1.22s
+659.5s 480 Epoch[467/1000] loss=0.0682 time=1.26s
+660.6s 481 Epoch[468/1000] loss=0.0682 time=1.10s
+661.7s 482 Epoch[469/1000] loss=0.0659 time=1.10s
+662.9s 483 Epoch[470/1000] loss=0.0663 time=1.15s
+664.1s 484 Epoch[471/1000] loss=0.0646 time=1.17s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0149
+665.5s 485 Epoch[472/1000] loss=0.0683 time=1.33s
+666.7s 486 Epoch[473/1000] loss=0.0666 time=1.25s
+667.8s 487 Epoch[474/1000] loss=0.0668 time=1.15s
+668.9s 488 Epoch[475/1000] loss=0.0662 time=1.10s
+670.1s 489 Epoch[476/1000] loss=0.0674 time=1.12s
+671.2s 490 Epoch[477/1000] loss=0.0659 time=1.15s
+672.5s 491 Epoch[478/1000] loss=0.0654 time=1.30s
+673.8s 492 Epoch[479/1000] loss=0.0659 time=1.25s
+674.9s 493 Epoch[480/1000] loss=0.0675 time=1.16s
+676.3s 494 Epoch[481/1000] loss=0.0683 time=1.32s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0147
+677.5s 495 Epoch[482/1000] loss=0.0669 time=1.21s
+678.6s 496 Epoch[483/1000] loss=0.0647 time=1.15s
+679.8s 497 Epoch[484/1000] loss=0.0644 time=1.19s
+681.0s 498 Epoch[485/1000] loss=0.0645 time=1.21s
+682.2s 499 Epoch[486/1000] loss=0.0651 time=1.21s
+683.5s 500 Epoch[487/1000] loss=0.0647 time=1.21s
+684.8s 501 Epoch[488/1000] loss=0.0655 time=1.35s
+686.0s 502 Epoch[489/1000] loss=0.0661 time=1.24s
+687.3s 503 Epoch[490/1000] loss=0.0656 time=1.25s
+688.7s 504 Epoch[491/1000] loss=0.0682 time=1.42s | [TEST] Recall@20=0.0050 Precision@20=0.0153 NDCG@20=0.0157
+690.0s 505 Epoch[492/1000] loss=0.0658 time=1.22s
+691.3s 506 Epoch[493/1000] loss=0.0667 time=1.36s
+692.6s 507 Epoch[494/1000] loss=0.0671 time=1.28s
+693.8s 508 Epoch[495/1000] loss=0.0674 time=1.22s
+695.2s 509 Epoch[496/1000] loss=0.0657 time=1.41s
+696.6s 510 Epoch[497/1000] loss=0.0661 time=1.32s
+697.8s 511 Epoch[498/1000] loss=0.0658 time=1.27s
+699.0s 512 Epoch[499/1000] loss=0.0663 time=1.16s
+700.3s 513 Epoch[500/1000] loss=0.0644 time=1.30s
+701.6s 514 Epoch[501/1000] loss=0.0653 time=1.28s | [TEST] Recall@20=0.0047 Precision@20=0.0144 NDCG@20=0.0155
+702.8s 515 Epoch[502/1000] loss=0.0660 time=1.18s
+704.1s 516 Epoch[503/1000] loss=0.0655 time=1.31s
+705.3s 517 Epoch[504/1000] loss=0.0648 time=1.26s
+706.4s 518 Epoch[505/1000] loss=0.0667 time=1.09s
+707.7s 519 Epoch[506/1000] loss=0.0628 time=1.29s
+708.9s 520 Epoch[507/1000] loss=0.0664 time=1.21s
+710.2s 521 Epoch[508/1000] loss=0.0658 time=1.24s
+711.5s 522 Epoch[509/1000] loss=0.0649 time=1.31s
+712.8s 523 Epoch[510/1000] loss=0.0656 time=1.28s
+714.0s 524 Epoch[511/1000] loss=0.0650 time=1.18s | [TEST] Recall@20=0.0053 Precision@20=0.0163 NDCG@20=0.0169
+715.0s 525 Epoch[512/1000] loss=0.0662 time=1.04s
+716.2s 526 Epoch[513/1000] loss=0.0659 time=1.16s
+717.4s 527 Epoch[514/1000] loss=0.0664 time=1.19s
+718.5s 528 Epoch[515/1000] loss=0.0654 time=1.17s
+719.9s 529 Epoch[516/1000] loss=0.0643 time=1.37s
+721.5s 530 Epoch[517/1000] loss=0.0646 time=1.61s
+723.0s 531 Epoch[518/1000] loss=0.0641 time=1.54s
+724.3s 532 Epoch[519/1000] loss=0.0646 time=1.24s
+725.7s 533 Epoch[520/1000] loss=0.0646 time=1.43s
+727.0s 534 Epoch[521/1000] loss=0.0664 time=1.23s | [TEST] Recall@20=0.0048 Precision@20=0.0149 NDCG@20=0.0159
+728.2s 535 Epoch[522/1000] loss=0.0645 time=1.23s
+729.4s 536 Epoch[523/1000] loss=0.0641 time=1.21s
+730.7s 537 Epoch[524/1000] loss=0.0653 time=1.29s
+732.0s 538 Epoch[525/1000] loss=0.0662 time=1.27s
+733.5s 539 Epoch[526/1000] loss=0.0652 time=1.50s
+734.7s 540 Epoch[527/1000] loss=0.0657 time=1.20s
+736.2s 541 Epoch[528/1000] loss=0.0631 time=1.51s
+737.6s 542 Epoch[529/1000] loss=0.0643 time=1.40s
+738.8s 543 Epoch[530/1000] loss=0.0656 time=1.19s
+740.1s 544 Epoch[531/1000] loss=0.0639 time=1.24s | [TEST] Recall@20=0.0045 Precision@20=0.0139 NDCG@20=0.0149
+741.3s 545 Epoch[532/1000] loss=0.0656 time=1.24s
+742.7s 546 Epoch[533/1000] loss=0.0636 time=1.37s
+743.9s 547 Epoch[534/1000] loss=0.0641 time=1.25s
+745.2s 548 Epoch[535/1000] loss=0.0660 time=1.33s
+746.3s 549 Epoch[536/1000] loss=0.0644 time=1.06s
+747.6s 550 Epoch[537/1000] loss=0.0643 time=1.33s
+749.1s 551 Epoch[538/1000] loss=0.0653 time=1.41s
+750.4s 552 Epoch[539/1000] loss=0.0655 time=1.32s
+751.7s 553 Epoch[540/1000] loss=0.0658 time=1.31s
+753.0s 554 Epoch[541/1000] loss=0.0657 time=1.26s | [TEST] Recall@20=0.0045 Precision@20=0.0139 NDCG@20=0.0148
+754.2s 555 Epoch[542/1000] loss=0.0626 time=1.26s
+755.5s 556 Epoch[543/1000] loss=0.0678 time=1.24s
+756.7s 557 Epoch[544/1000] loss=0.0650 time=1.26s
+758.0s 558 Epoch[545/1000] loss=0.0639 time=1.23s
+759.3s 559 Epoch[546/1000] loss=0.0634 time=1.33s
+760.6s 560 Epoch[547/1000] loss=0.0632 time=1.25s
+761.9s 561 Epoch[548/1000] loss=0.0663 time=1.33s
+763.2s 562 Epoch[549/1000] loss=0.0671 time=1.32s
+764.5s 563 Epoch[550/1000] loss=0.0638 time=1.32s
+765.9s 564 Epoch[551/1000] loss=0.0662 time=1.32s | [TEST] Recall@20=0.0045 Precision@20=0.0139 NDCG@20=0.0153
+767.4s 565 Epoch[552/1000] loss=0.0637 time=1.44s
+768.6s 566 Epoch[553/1000] loss=0.0661 time=1.20s
+769.9s 567 Epoch[554/1000] loss=0.0657 time=1.36s
+771.1s 568 Epoch[555/1000] loss=0.0636 time=1.20s
+772.4s 569 Epoch[556/1000] loss=0.0637 time=1.25s
+773.7s 570 Epoch[557/1000] loss=0.0631 time=1.33s
+774.8s 571 Epoch[558/1000] loss=0.0658 time=1.10s
+776.0s 572 Epoch[559/1000] loss=0.0645 time=1.24s
+777.2s 573 Epoch[560/1000] loss=0.0654 time=1.14s
+778.5s 574 Epoch[561/1000] loss=0.0651 time=1.32s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0160
+779.8s 575 Epoch[562/1000] loss=0.0663 time=1.26s
+781.1s 576 Epoch[563/1000] loss=0.0635 time=1.25s
+782.3s 577 Epoch[564/1000] loss=0.0654 time=1.20s
+783.5s 578 Epoch[565/1000] loss=0.0634 time=1.27s
+784.9s 579 Epoch[566/1000] loss=0.0650 time=1.33s
+786.2s 580 Epoch[567/1000] loss=0.0646 time=1.34s
+787.4s 581 Epoch[568/1000] loss=0.0645 time=1.24s
+788.8s 582 Epoch[569/1000] loss=0.0658 time=1.27s
+790.0s 583 Epoch[570/1000] loss=0.0621 time=1.31s
+791.8s 584 Epoch[571/1000] loss=0.0665 time=1.75s | [TEST] Recall@20=0.0045 Precision@20=0.0139 NDCG@20=0.0160
+793.4s 585 Epoch[572/1000] loss=0.0647 time=1.59s
+794.9s 586 Epoch[573/1000] loss=0.0643 time=1.49s
+796.0s 587 Epoch[574/1000] loss=0.0676 time=1.07s
+797.1s 588 Epoch[575/1000] loss=0.0635 time=1.17s
+798.3s 589 Epoch[576/1000] loss=0.0654 time=1.14s
+799.4s 590 Epoch[577/1000] loss=0.0644 time=1.13s
+800.7s 591 Epoch[578/1000] loss=0.0646 time=1.34s
+802.1s 592 Epoch[579/1000] loss=0.0648 time=1.36s
+803.3s 593 Epoch[580/1000] loss=0.0639 time=1.24s
+805.1s 594 Epoch[581/1000] loss=0.0625 time=1.71s | [TEST] Recall@20=0.0043 Precision@20=0.0134 NDCG@20=0.0156
+806.6s 595 Epoch[582/1000] loss=0.0652 time=1.45s
+808.1s 596 Epoch[583/1000] loss=0.0637 time=1.56s
+809.6s 597 Epoch[584/1000] loss=0.0668 time=1.46s
+811.0s 598 Epoch[585/1000] loss=0.0646 time=1.41s
+812.5s 599 Epoch[586/1000] loss=0.0631 time=1.49s
+813.8s 600 Epoch[587/1000] loss=0.0663 time=1.29s
+815.2s 601 Epoch[588/1000] loss=0.0637 time=1.47s
+816.8s 602 Epoch[589/1000] loss=0.0637 time=1.60s
+818.2s 603 Epoch[590/1000] loss=0.0649 time=1.38s
+820.0s 604 Epoch[591/1000] loss=0.0645 time=1.68s | [TEST] Recall@20=0.0040 Precision@20=0.0124 NDCG@20=0.0143
+821.5s 605 Epoch[592/1000] loss=0.0630 time=1.48s
+822.8s 606 Epoch[593/1000] loss=0.0651 time=1.37s
+824.3s 607 Epoch[594/1000] loss=0.0650 time=1.46s
+825.7s 608 Epoch[595/1000] loss=0.0647 time=1.44s
+827.1s 609 Epoch[596/1000] loss=0.0632 time=1.42s
+828.6s 610 Epoch[597/1000] loss=0.0643 time=1.46s
+830.2s 611 Epoch[598/1000] loss=0.0650 time=1.56s
+831.5s 612 Epoch[599/1000] loss=0.0648 time=1.37s
+832.7s 613 Epoch[600/1000] loss=0.0644 time=1.20s
+834.0s 614 Epoch[601/1000] loss=0.0643 time=1.26s | [TEST] Recall@20=0.0042 Precision@20=0.0129 NDCG@20=0.0149
+835.5s 615 Epoch[602/1000] loss=0.0636 time=1.51s
+837.0s 616 Epoch[603/1000] loss=0.0644 time=1.48s
+838.3s 617 Epoch[604/1000] loss=0.0651 time=1.29s
+839.7s 618 Epoch[605/1000] loss=0.0662 time=1.38s
+841.2s 619 Epoch[606/1000] loss=0.0632 time=1.51s
+842.7s 620 Epoch[607/1000] loss=0.0646 time=1.49s
+844.4s 621 Epoch[608/1000] loss=0.0640 time=1.75s
+845.7s 622 Epoch[609/1000] loss=0.0638 time=1.31s
+847.1s 623 Epoch[610/1000] loss=0.0636 time=1.40s
+848.5s 624 Epoch[611/1000] loss=0.0643 time=1.31s | [TEST] Recall@20=0.0041 Precision@20=0.0129 NDCG@20=0.0151
+849.7s 625 Epoch[612/1000] loss=0.0648 time=1.20s
+851.1s 626 Epoch[613/1000] loss=0.0636 time=1.31s
+852.2s 627 Epoch[614/1000] loss=0.0645 time=1.19s
+853.3s 628 Epoch[615/1000] loss=0.0653 time=1.13s
+854.5s 629 Epoch[616/1000] loss=0.0662 time=1.21s
+855.7s 630 Epoch[617/1000] loss=0.0635 time=1.19s
+857.0s 631 Epoch[618/1000] loss=0.0640 time=1.22s
+858.1s 632 Epoch[619/1000] loss=0.0627 time=1.18s
+859.4s 633 Epoch[620/1000] loss=0.0627 time=1.23s
+860.6s 634 Epoch[621/1000] loss=0.0634 time=1.19s | [TEST] Recall@20=0.0040 Precision@20=0.0124 NDCG@20=0.0149
+861.8s 635 Epoch[622/1000] loss=0.0634 time=1.17s
+863.0s 636 Epoch[623/1000] loss=0.0640 time=1.20s
+864.2s 637 Epoch[624/1000] loss=0.0652 time=1.22s
+865.4s 638 Epoch[625/1000] loss=0.0634 time=1.19s
+866.6s 639 Epoch[626/1000] loss=0.0636 time=1.28s
+867.8s 640 Epoch[627/1000] loss=0.0645 time=1.17s
+868.9s 641 Epoch[628/1000] loss=0.0634 time=1.09s
+870.1s 642 Epoch[629/1000] loss=0.0635 time=1.21s
+871.3s 643 Epoch[630/1000] loss=0.0631 time=1.22s
+872.5s 644 Epoch[631/1000] loss=0.0609 time=1.12s | [TEST] Recall@20=0.0040 Precision@20=0.0124 NDCG@20=0.0145
+873.7s 645 Epoch[632/1000] loss=0.0650 time=1.20s
+874.9s 646 Epoch[633/1000] loss=0.0663 time=1.15s
+876.2s 647 Epoch[634/1000] loss=0.0654 time=1.30s
+877.4s 648 Epoch[635/1000] loss=0.0637 time=1.23s
+878.6s 649 Epoch[636/1000] loss=0.0644 time=1.21s
+879.8s 650 Epoch[637/1000] loss=0.0659 time=1.19s
+880.9s 651 Epoch[638/1000] loss=0.0633 time=1.17s
+882.2s 652 Epoch[639/1000] loss=0.0629 time=1.21s
+883.7s 653 Epoch[640/1000] loss=0.0629 time=1.49s
+885.0s 654 Epoch[641/1000] loss=0.0644 time=1.28s | [TEST] Recall@20=0.0038 Precision@20=0.0119 NDCG@20=0.0140
+886.4s 655 Epoch[642/1000] loss=0.0656 time=1.45s
+887.8s 656 Epoch[643/1000] loss=0.0627 time=1.41s
+889.0s 657 Epoch[644/1000] loss=0.0624 time=1.22s
+890.2s 658 Epoch[645/1000] loss=0.0638 time=1.10s
+891.4s 659 Epoch[646/1000] loss=0.0626 time=1.21s
+892.6s 660 Epoch[647/1000] loss=0.0640 time=1.20s
+893.7s 661 Epoch[648/1000] loss=0.0613 time=1.16s
+894.9s 662 Epoch[649/1000] loss=0.0645 time=1.18s
+896.1s 663 Epoch[650/1000] loss=0.0649 time=1.24s
+897.3s 664 Epoch[651/1000] loss=0.0637 time=1.16s | [TEST] Recall@20=0.0041 Precision@20=0.0129 NDCG@20=0.0147
+898.5s 665 Epoch[652/1000] loss=0.0626 time=1.19s
+899.6s 666 Epoch[653/1000] loss=0.0668 time=1.11s
+900.8s 667 Epoch[654/1000] loss=0.0641 time=1.13s
+902.0s 668 Epoch[655/1000] loss=0.0616 time=1.21s
+903.2s 669 Epoch[656/1000] loss=0.0622 time=1.22s
+904.5s 670 Epoch[657/1000] loss=0.0641 time=1.28s
+905.7s 671 Epoch[658/1000] loss=0.0651 time=1.21s
+906.8s 672 Epoch[659/1000] loss=0.0629 time=1.10s
+907.9s 673 Epoch[660/1000] loss=0.0643 time=1.13s
+909.0s 674 Epoch[661/1000] loss=0.0641 time=1.07s | [TEST] Recall@20=0.0040 Precision@20=0.0124 NDCG@20=0.0145
+910.2s 675 Epoch[662/1000] loss=0.0634 time=1.21s
+911.5s 676 Epoch[663/1000] loss=0.0640 time=1.23s
+912.7s 677 Epoch[664/1000] loss=0.0643 time=1.15s
+913.8s 678 Epoch[665/1000] loss=0.0634 time=1.19s
+915.1s 679 Epoch[666/1000] loss=0.0628 time=1.28s
+916.3s 680 Epoch[667/1000] loss=0.0639 time=1.16s
+917.4s 681 Epoch[668/1000] loss=0.0641 time=1.17s
+918.6s 682 Epoch[669/1000] loss=0.0632 time=1.20s
+919.8s 683 Epoch[670/1000] loss=0.0653 time=1.21s
+921.1s 684 Epoch[671/1000] loss=0.0641 time=1.19s | [TEST] Recall@20=0.0045 Precision@20=0.0139 NDCG@20=0.0151
+922.3s 685 Epoch[672/1000] loss=0.0631 time=1.19s
+923.4s 686 Epoch[673/1000] loss=0.0641 time=1.18s
+924.6s 687 Epoch[674/1000] loss=0.0647 time=1.15s
+925.7s 688 Epoch[675/1000] loss=0.0631 time=1.12s
+927.0s 689 Epoch[676/1000] loss=0.0639 time=1.30s
+928.6s 690 Epoch[677/1000] loss=0.0630 time=1.55s
+929.8s 691 Epoch[678/1000] loss=0.0640 time=1.26s
+931.0s 692 Epoch[679/1000] loss=0.0622 time=1.22s
+932.3s 693 Epoch[680/1000] loss=0.0636 time=1.29s
+933.7s 694 Epoch[681/1000] loss=0.0639 time=1.29s | [TEST] Recall@20=0.0043 Precision@20=0.0134 NDCG@20=0.0146
+934.9s 695 Epoch[682/1000] loss=0.0628 time=1.23s
+936.0s 696 Epoch[683/1000] loss=0.0618 time=1.14s
+937.2s 697 Epoch[684/1000] loss=0.0649 time=1.21s
+938.5s 698 Epoch[685/1000] loss=0.0647 time=1.23s
+939.7s 699 Epoch[686/1000] loss=0.0629 time=1.19s
+941.0s 700 Epoch[687/1000] loss=0.0650 time=1.34s
+942.3s 701 Epoch[688/1000] loss=0.0630 time=1.32s
+943.5s 702 Epoch[689/1000] loss=0.0630 time=1.18s
+944.8s 703 Epoch[690/1000] loss=0.0655 time=1.26s
+946.0s 704 Epoch[691/1000] loss=0.0621 time=1.21s | [TEST] Recall@20=0.0043 Precision@20=0.0134 NDCG@20=0.0154
+947.1s 705 Epoch[692/1000] loss=0.0626 time=1.12s
+948.3s 706 Epoch[693/1000] loss=0.0628 time=1.17s
+949.5s 707 Epoch[694/1000] loss=0.0627 time=1.20s
+950.7s 708 Epoch[695/1000] loss=0.0618 time=1.24s
+952.0s 709 Epoch[696/1000] loss=0.0643 time=1.31s
+953.3s 710 Epoch[697/1000] loss=0.0616 time=1.26s
+954.5s 711 Epoch[698/1000] loss=0.0624 time=1.24s
+955.8s 712 Epoch[699/1000] loss=0.0638 time=1.25s
+956.9s 713 Epoch[700/1000] loss=0.0633 time=1.13s
+958.2s 714 Epoch[701/1000] loss=0.0641 time=1.21s | [TEST] Recall@20=0.0045 Precision@20=0.0139 NDCG@20=0.0151
+959.6s 715 Epoch[702/1000] loss=0.0646 time=1.40s
+961.0s 716 Epoch[703/1000] loss=0.0640 time=1.46s
+962.2s 717 Epoch[704/1000] loss=0.0638 time=1.18s
+963.5s 718 Epoch[705/1000] loss=0.0656 time=1.24s
+964.7s 719 Epoch[706/1000] loss=0.0650 time=1.20s
+965.9s 720 Epoch[707/1000] loss=0.0641 time=1.25s
+967.1s 721 Epoch[708/1000] loss=0.0645 time=1.24s
+968.5s 722 Epoch[709/1000] loss=0.0625 time=1.34s
+969.7s 723 Epoch[710/1000] loss=0.0614 time=1.23s
+971.0s 724 Epoch[711/1000] loss=0.0625 time=1.25s | [TEST] Recall@20=0.0043 Precision@20=0.0134 NDCG@20=0.0142
+972.4s 725 Epoch[712/1000] loss=0.0642 time=1.41s
+973.8s 726 Epoch[713/1000] loss=0.0645 time=1.29s
+974.9s 727 Epoch[714/1000] loss=0.0639 time=1.24s
+976.2s 728 Epoch[715/1000] loss=0.0653 time=1.23s
+977.4s 729 Epoch[716/1000] loss=0.0633 time=1.21s
+978.7s 730 Epoch[717/1000] loss=0.0629 time=1.27s
+979.8s 731 Epoch[718/1000] loss=0.0642 time=1.19s
+981.2s 732 Epoch[719/1000] loss=0.0655 time=1.32s
+982.3s 733 Epoch[720/1000] loss=0.0637 time=1.17s
+983.6s 734 Epoch[721/1000] loss=0.0628 time=1.25s | [TEST] Recall@20=0.0043 Precision@20=0.0134 NDCG@20=0.0140
+985.0s 735 Epoch[722/1000] loss=0.0622 time=1.37s
+986.3s 736 Epoch[723/1000] loss=0.0630 time=1.30s
+987.6s 737 Epoch[724/1000] loss=0.0624 time=1.27s
+989.0s 738 Epoch[725/1000] loss=0.0624 time=1.47s
+990.4s 739 Epoch[726/1000] loss=0.0631 time=1.34s
+992.0s 740 Epoch[727/1000] loss=0.0628 time=1.60s
+993.3s 741 Epoch[728/1000] loss=0.0638 time=1.31s
+994.6s 742 Epoch[729/1000] loss=0.0624 time=1.27s
+996.2s 743 Epoch[730/1000] loss=0.0626 time=1.62s
+997.8s 744 Epoch[731/1000] loss=0.0629 time=1.61s | [TEST] Recall@20=0.0044 Precision@20=0.0139 NDCG@20=0.0144
+999.3s 745 Epoch[732/1000] loss=0.0612 time=1.45s
+1000.5s 746 Epoch[733/1000] loss=0.0627 time=1.28s
+1002.0s 747 Epoch[734/1000] loss=0.0645 time=1.47s
+1003.4s 748 Epoch[735/1000] loss=0.0643 time=1.34s
+1004.7s 749 Epoch[736/1000] loss=0.0628 time=1.30s
+1006.0s 750 Epoch[737/1000] loss=0.0623 time=1.34s
+1007.3s 751 Epoch[738/1000] loss=0.0633 time=1.27s
+1008.6s 752 Epoch[739/1000] loss=0.0638 time=1.32s
+1010.0s 753 Epoch[740/1000] loss=0.0627 time=1.41s
+1011.4s 754 Epoch[741/1000] loss=0.0627 time=1.41s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0144
+1012.9s 755 Epoch[742/1000] loss=0.0625 time=1.48s
+1014.5s 756 Epoch[743/1000] loss=0.0609 time=1.53s
+1015.9s 757 Epoch[744/1000] loss=0.0624 time=1.44s
+1017.3s 758 Epoch[745/1000] loss=0.0643 time=1.40s
+1018.5s 759 Epoch[746/1000] loss=0.0643 time=1.18s
+1019.6s 760 Epoch[747/1000] loss=0.0651 time=1.08s
+1020.8s 761 Epoch[748/1000] loss=0.0626 time=1.25s
+1022.4s 762 Epoch[749/1000] loss=0.0627 time=1.57s
+1023.8s 763 Epoch[750/1000] loss=0.0614 time=1.38s
+1025.2s 764 Epoch[751/1000] loss=0.0624 time=1.38s | [TEST] Recall@20=0.0043 Precision@20=0.0134 NDCG@20=0.0141
+1026.5s 765 Epoch[752/1000] loss=0.0635 time=1.35s
+1027.9s 766 Epoch[753/1000] loss=0.0629 time=1.32s
+1029.3s 767 Epoch[754/1000] loss=0.0603 time=1.43s
+1030.5s 768 Epoch[755/1000] loss=0.0639 time=1.23s
+1031.9s 769 Epoch[756/1000] loss=0.0619 time=1.35s
+1033.0s 770 Epoch[757/1000] loss=0.0624 time=1.18s
+1034.5s 771 Epoch[758/1000] loss=0.0616 time=1.48s
+1035.8s 772 Epoch[759/1000] loss=0.0641 time=1.20s
+1037.2s 773 Epoch[760/1000] loss=0.0612 time=1.43s
+1038.4s 774 Epoch[761/1000] loss=0.0620 time=1.21s | [TEST] Recall@20=0.0045 Precision@20=0.0139 NDCG@20=0.0145
+1039.5s 775 Epoch[762/1000] loss=0.0635 time=1.10s
+1040.6s 776 Epoch[763/1000] loss=0.0625 time=1.11s
+1041.7s 777 Epoch[764/1000] loss=0.0631 time=1.10s
+1042.8s 778 Epoch[765/1000] loss=0.0636 time=1.08s
+1043.9s 779 Epoch[766/1000] loss=0.0627 time=1.15s
+1045.2s 780 Epoch[767/1000] loss=0.0642 time=1.23s
+1046.5s 781 Epoch[768/1000] loss=0.0615 time=1.30s
+1047.6s 782 Epoch[769/1000] loss=0.0649 time=1.09s
+1048.7s 783 Epoch[770/1000] loss=0.0621 time=1.11s
+1049.9s 784 Epoch[771/1000] loss=0.0637 time=1.18s | [TEST] Recall@20=0.0045 Precision@20=0.0139 NDCG@20=0.0146
+1051.0s 785 Epoch[772/1000] loss=0.0612 time=1.10s
+1052.1s 786 Epoch[773/1000] loss=0.0635 time=1.12s
+1053.2s 787 Epoch[774/1000] loss=0.0632 time=1.05s
+1054.3s 788 Epoch[775/1000] loss=0.0616 time=1.10s
+1055.4s 789 Epoch[776/1000] loss=0.0649 time=1.08s
+1056.5s 790 Epoch[777/1000] loss=0.0620 time=1.12s
+1057.6s 791 Epoch[778/1000] loss=0.0609 time=1.10s
+1058.7s 792 Epoch[779/1000] loss=0.0651 time=1.12s
+1059.8s 793 Epoch[780/1000] loss=0.0618 time=1.09s
+1061.0s 794 Epoch[781/1000] loss=0.0617 time=1.12s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0148
+1062.1s 795 Epoch[782/1000] loss=0.0632 time=1.18s
+1063.2s 796 Epoch[783/1000] loss=0.0642 time=1.10s
+1064.3s 797 Epoch[784/1000] loss=0.0636 time=1.08s
+1065.6s 798 Epoch[785/1000] loss=0.0632 time=1.32s
+1067.0s 799 Epoch[786/1000] loss=0.0634 time=1.28s
+1068.1s 800 Epoch[787/1000] loss=0.0625 time=1.22s
+1069.5s 801 Epoch[788/1000] loss=0.0661 time=1.38s
+1070.8s 802 Epoch[789/1000] loss=0.0604 time=1.25s
+1072.2s 803 Epoch[790/1000] loss=0.0628 time=1.42s
+1073.5s 804 Epoch[791/1000] loss=0.0632 time=1.26s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0146
+1074.8s 805 Epoch[792/1000] loss=0.0612 time=1.34s
+1076.2s 806 Epoch[793/1000] loss=0.0641 time=1.37s
+1077.5s 807 Epoch[794/1000] loss=0.0626 time=1.29s
+1078.7s 808 Epoch[795/1000] loss=0.0630 time=1.19s
+1080.0s 809 Epoch[796/1000] loss=0.0624 time=1.27s
+1081.3s 810 Epoch[797/1000] loss=0.0630 time=1.30s
+1082.5s 811 Epoch[798/1000] loss=0.0638 time=1.25s
+1083.8s 812 Epoch[799/1000] loss=0.0646 time=1.33s
+1085.4s 813 Epoch[800/1000] loss=0.0618 time=1.51s
+1087.0s 814 Epoch[801/1000] loss=0.0613 time=1.55s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0149
+1088.5s 815 Epoch[802/1000] loss=0.0615 time=1.54s
+1090.1s 816 Epoch[803/1000] loss=0.0635 time=1.58s
+1091.7s 817 Epoch[804/1000] loss=0.0637 time=1.59s
+1093.3s 818 Epoch[805/1000] loss=0.0639 time=1.64s
+1094.8s 819 Epoch[806/1000] loss=0.0623 time=1.48s
+1096.3s 820 Epoch[807/1000] loss=0.0602 time=1.49s
+1098.0s 821 Epoch[808/1000] loss=0.0632 time=1.63s
+1099.4s 822 Epoch[809/1000] loss=0.0603 time=1.49s
+1101.1s 823 Epoch[810/1000] loss=0.0628 time=1.73s
+1102.6s 824 Epoch[811/1000] loss=0.0613 time=1.38s | [TEST] Recall@20=0.0044 Precision@20=0.0139 NDCG@20=0.0143
+1104.1s 825 Epoch[812/1000] loss=0.0629 time=1.49s
+1105.5s 826 Epoch[813/1000] loss=0.0629 time=1.45s
+1106.9s 827 Epoch[814/1000] loss=0.0622 time=1.35s
+1108.2s 828 Epoch[815/1000] loss=0.0633 time=1.37s
+1109.7s 829 Epoch[816/1000] loss=0.0600 time=1.46s
+1111.5s 830 Epoch[817/1000] loss=0.0616 time=1.80s
+1113.0s 831 Epoch[818/1000] loss=0.0627 time=1.52s
+1114.4s 832 Epoch[819/1000] loss=0.0626 time=1.43s
+1116.1s 833 Epoch[820/1000] loss=0.0642 time=1.64s
+1117.8s 834 Epoch[821/1000] loss=0.0632 time=1.61s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0144
+1119.4s 835 Epoch[822/1000] loss=0.0613 time=1.69s
+1121.2s 836 Epoch[823/1000] loss=0.0619 time=1.70s
+1122.6s 837 Epoch[824/1000] loss=0.0629 time=1.44s
+1124.0s 838 Epoch[825/1000] loss=0.0634 time=1.42s
+1125.7s 839 Epoch[826/1000] loss=0.0616 time=1.65s
+1127.2s 840 Epoch[827/1000] loss=0.0633 time=1.51s
+1128.5s 841 Epoch[828/1000] loss=0.0623 time=1.25s
+1129.8s 842 Epoch[829/1000] loss=0.0615 time=1.33s
+1131.1s 843 Epoch[830/1000] loss=0.0636 time=1.36s
+1132.6s 844 Epoch[831/1000] loss=0.0613 time=1.41s | [TEST] Recall@20=0.0044 Precision@20=0.0139 NDCG@20=0.0142
+1133.9s 845 Epoch[832/1000] loss=0.0614 time=1.31s
+1135.3s 846 Epoch[833/1000] loss=0.0632 time=1.39s
+1136.7s 847 Epoch[834/1000] loss=0.0623 time=1.47s
+1138.3s 848 Epoch[835/1000] loss=0.0649 time=1.54s
+1140.0s 849 Epoch[836/1000] loss=0.0640 time=1.69s
+1141.8s 850 Epoch[837/1000] loss=0.0634 time=1.82s
+1143.6s 851 Epoch[838/1000] loss=0.0626 time=1.82s
+1145.2s 852 Epoch[839/1000] loss=0.0631 time=1.65s
+1146.9s 853 Epoch[840/1000] loss=0.0623 time=1.64s
+1148.6s 854 Epoch[841/1000] loss=0.0636 time=1.64s | [TEST] Recall@20=0.0044 Precision@20=0.0139 NDCG@20=0.0142
+1150.2s 855 Epoch[842/1000] loss=0.0628 time=1.58s
+1151.8s 856 Epoch[843/1000] loss=0.0639 time=1.63s
+1153.2s 857 Epoch[844/1000] loss=0.0615 time=1.37s
+1154.4s 858 Epoch[845/1000] loss=0.0628 time=1.21s
+1155.4s 859 Epoch[846/1000] loss=0.0642 time=1.02s
+1156.4s 860 Epoch[847/1000] loss=0.0614 time=1.04s
+1157.5s 861 Epoch[848/1000] loss=0.0602 time=1.04s
+1158.6s 862 Epoch[849/1000] loss=0.0635 time=1.04s
+1159.5s 863 Epoch[850/1000] loss=0.0603 time=1.03s
+1160.6s 864 Epoch[851/1000] loss=0.0621 time=1.04s | [TEST] Recall@20=0.0043 Precision@20=0.0134 NDCG@20=0.0141
+1161.7s 865 Epoch[852/1000] loss=0.0620 time=1.06s
+1162.7s 866 Epoch[853/1000] loss=0.0641 time=1.03s
+1163.7s 867 Epoch[854/1000] loss=0.0630 time=1.04s
+1164.8s 868 Epoch[855/1000] loss=0.0628 time=1.06s
+1165.9s 869 Epoch[856/1000] loss=0.0622 time=1.09s
+1167.0s 870 Epoch[857/1000] loss=0.0646 time=1.07s
+1168.0s 871 Epoch[858/1000] loss=0.0617 time=1.04s
+1169.1s 872 Epoch[859/1000] loss=0.0626 time=1.06s
+1170.2s 873 Epoch[860/1000] loss=0.0641 time=1.10s
+1171.3s 874 Epoch[861/1000] loss=0.0606 time=1.15s | [TEST] Recall@20=0.0044 Precision@20=0.0139 NDCG@20=0.0145
+1172.4s 875 Epoch[862/1000] loss=0.0625 time=1.05s
+1173.5s 876 Epoch[863/1000] loss=0.0627 time=1.10s
+1174.6s 877 Epoch[864/1000] loss=0.0602 time=1.06s
+1175.6s 878 Epoch[865/1000] loss=0.0624 time=1.06s
+1177.0s 879 Epoch[866/1000] loss=0.0621 time=1.38s
+1178.4s 880 Epoch[867/1000] loss=0.0641 time=1.39s
+1179.9s 881 Epoch[868/1000] loss=0.0609 time=1.48s
+1181.3s 882 Epoch[869/1000] loss=0.0621 time=1.38s
+1182.4s 883 Epoch[870/1000] loss=0.0613 time=1.18s
+1183.7s 884 Epoch[871/1000] loss=0.0618 time=1.26s | [TEST] Recall@20=0.0045 Precision@20=0.0139 NDCG@20=0.0152
+1185.0s 885 Epoch[872/1000] loss=0.0626 time=1.21s
+1186.3s 886 Epoch[873/1000] loss=0.0634 time=1.33s
+1187.7s 887 Epoch[874/1000] loss=0.0630 time=1.39s
+1189.1s 888 Epoch[875/1000] loss=0.0600 time=1.32s
+1190.3s 889 Epoch[876/1000] loss=0.0612 time=1.35s
+1191.6s 890 Epoch[877/1000] loss=0.0611 time=1.28s
+1192.8s 891 Epoch[878/1000] loss=0.0614 time=1.17s
+1193.9s 892 Epoch[879/1000] loss=0.0635 time=1.09s
+1195.0s 893 Epoch[880/1000] loss=0.0629 time=1.10s
+1196.3s 894 Epoch[881/1000] loss=0.0636 time=1.22s | [TEST] Recall@20=0.0046 Precision@20=0.0144 NDCG@20=0.0158
+1197.4s 895 Epoch[882/1000] loss=0.0610 time=1.14s
+1198.6s 896 Epoch[883/1000] loss=0.0637 time=1.23s
+1199.7s 897 Epoch[884/1000] loss=0.0606 time=1.09s
+1200.8s 898 Epoch[885/1000] loss=0.0596 time=1.05s
+1201.8s 899 Epoch[886/1000] loss=0.0623 time=1.08s
+1202.9s 900 Epoch[887/1000] loss=0.0614 time=1.09s
+1204.0s 901 Epoch[888/1000] loss=0.0644 time=1.09s
+1205.1s 902 Epoch[889/1000] loss=0.0624 time=1.12s
+1206.2s 903 Epoch[890/1000] loss=0.0630 time=1.09s
+1207.3s 904 Epoch[891/1000] loss=0.0608 time=1.06s | [TEST] Recall@20=0.0045 Precision@20=0.0139 NDCG@20=0.0157
+1208.4s 905 Epoch[892/1000] loss=0.0637 time=1.05s
+1209.5s 906 Epoch[893/1000] loss=0.0630 time=1.09s
+1210.5s 907 Epoch[894/1000] loss=0.0622 time=1.06s
+1211.6s 908 Epoch[895/1000] loss=0.0605 time=1.11s
+1212.8s 909 Epoch[896/1000] loss=0.0627 time=1.12s
+1213.9s 910 Epoch[897/1000] loss=0.0632 time=1.11s
+1215.0s 911 Epoch[898/1000] loss=0.0620 time=1.08s
+1216.1s 912 Epoch[899/1000] loss=0.0652 time=1.17s
+1217.3s 913 Epoch[900/1000] loss=0.0627 time=1.15s
+1218.5s 914 Epoch[901/1000] loss=0.0647 time=1.20s | [TEST] Recall@20=0.0048 Precision@20=0.0149 NDCG@20=0.0162
+1219.7s 915 Epoch[902/1000] loss=0.0617 time=1.12s
+1220.8s 916 Epoch[903/1000] loss=0.0630 time=1.10s
+1222.0s 917 Epoch[904/1000] loss=0.0620 time=1.23s
+1223.1s 918 Epoch[905/1000] loss=0.0595 time=1.13s
+1224.2s 919 Epoch[906/1000] loss=0.0632 time=1.14s
+1225.4s 920 Epoch[907/1000] loss=0.0623 time=1.10s
+1226.5s 921 Epoch[908/1000] loss=0.0608 time=1.19s
+1227.7s 922 Epoch[909/1000] loss=0.0646 time=1.14s
+1228.8s 923 Epoch[910/1000] loss=0.0649 time=1.09s
+1229.9s 924 Epoch[911/1000] loss=0.0608 time=1.07s | [TEST] Recall@20=0.0053 Precision@20=0.0163 NDCG@20=0.0179
+1231.1s 925 Epoch[912/1000] loss=0.0628 time=1.20s
+1232.2s 926 Epoch[913/1000] loss=0.0620 time=1.11s
+1233.3s 927 Epoch[914/1000] loss=0.0623 time=1.08s
+1234.4s 928 Epoch[915/1000] loss=0.0623 time=1.08s
+1235.5s 929 Epoch[916/1000] loss=0.0625 time=1.09s
+1236.6s 930 Epoch[917/1000] loss=0.0610 time=1.13s
+1237.7s 931 Epoch[918/1000] loss=0.0642 time=1.08s
+1238.9s 932 Epoch[919/1000] loss=0.0629 time=1.19s
+1240.0s 933 Epoch[920/1000] loss=0.0598 time=1.16s
+1241.3s 934 Epoch[921/1000] loss=0.0620 time=1.25s | [TEST] Recall@20=0.0051 Precision@20=0.0158 NDCG@20=0.0171
+1242.6s 935 Epoch[922/1000] loss=0.0625 time=1.28s
+1243.7s 936 Epoch[923/1000] loss=0.0616 time=1.13s
+1244.9s 937 Epoch[924/1000] loss=0.0619 time=1.15s
+1246.0s 938 Epoch[925/1000] loss=0.0636 time=1.10s
+1247.0s 939 Epoch[926/1000] loss=0.0635 time=1.04s
+1248.2s 940 Epoch[927/1000] loss=0.0616 time=1.16s
+1249.4s 941 Epoch[928/1000] loss=0.0628 time=1.19s
+1250.6s 942 Epoch[929/1000] loss=0.0624 time=1.13s
+1251.8s 943 Epoch[930/1000] loss=0.0599 time=1.32s
+1253.0s 944 Epoch[931/1000] loss=0.0624 time=1.14s | [TEST] Recall@20=0.0052 Precision@20=0.0163 NDCG@20=0.0172
+1254.0s 945 Epoch[932/1000] loss=0.0650 time=1.04s
+1255.3s 946 Epoch[933/1000] loss=0.0621 time=1.22s
+1256.4s 947 Epoch[934/1000] loss=0.0627 time=1.11s
+1257.5s 948 Epoch[935/1000] loss=0.0635 time=1.16s
+1258.7s 949 Epoch[936/1000] loss=0.0614 time=1.21s
+1260.0s 950 Epoch[937/1000] loss=0.0640 time=1.28s
+1261.2s 951 Epoch[938/1000] loss=0.0616 time=1.17s
+1262.4s 952 Epoch[939/1000] loss=0.0634 time=1.18s
+1263.5s 953 Epoch[940/1000] loss=0.0625 time=1.14s
+1264.7s 954 Epoch[941/1000] loss=0.0604 time=1.16s | [TEST] Recall@20=0.0048 Precision@20=0.0149 NDCG@20=0.0163
+1265.8s 955 Epoch[942/1000] loss=0.0623 time=1.10s
+1267.0s 956 Epoch[943/1000] loss=0.0605 time=1.13s
+1268.1s 957 Epoch[944/1000] loss=0.0632 time=1.10s
+1269.2s 958 Epoch[945/1000] loss=0.0597 time=1.13s
+1270.3s 959 Epoch[946/1000] loss=0.0635 time=1.16s
+1271.6s 960 Epoch[947/1000] loss=0.0605 time=1.20s
+1272.6s 961 Epoch[948/1000] loss=0.0612 time=1.09s
+1273.7s 962 Epoch[949/1000] loss=0.0640 time=1.07s
+1274.9s 963 Epoch[950/1000] loss=0.0615 time=1.14s
+1276.0s 964 Epoch[951/1000] loss=0.0604 time=1.14s | [TEST] Recall@20=0.0052 Precision@20=0.0163 NDCG@20=0.0166
+1277.1s 965 Epoch[952/1000] loss=0.0612 time=1.08s
+1278.3s 966 Epoch[953/1000] loss=0.0620 time=1.15s
+1279.4s 967 Epoch[954/1000] loss=0.0631 time=1.16s
+1280.6s 968 Epoch[955/1000] loss=0.0614 time=1.14s
+1281.8s 969 Epoch[956/1000] loss=0.0630 time=1.22s
+1282.9s 970 Epoch[957/1000] loss=0.0623 time=1.11s
+1284.0s 971 Epoch[958/1000] loss=0.0617 time=1.13s
+1285.2s 972 Epoch[959/1000] loss=0.0616 time=1.20s
+1286.4s 973 Epoch[960/1000] loss=0.0626 time=1.19s
+1287.6s 974 Epoch[961/1000] loss=0.0628 time=1.12s | [TEST] Recall@20=0.0051 Precision@20=0.0158 NDCG@20=0.0159
+1288.7s 975 Epoch[962/1000] loss=0.0629 time=1.10s
+1289.9s 976 Epoch[963/1000] loss=0.0596 time=1.23s
+1291.5s 977 Epoch[964/1000] loss=0.0626 time=1.54s
+1292.7s 978 Epoch[965/1000] loss=0.0625 time=1.23s
+1294.0s 979 Epoch[966/1000] loss=0.0635 time=1.30s
+1295.2s 980 Epoch[967/1000] loss=0.0617 time=1.26s
+1296.7s 981 Epoch[968/1000] loss=0.0622 time=1.46s
+1298.1s 982 Epoch[969/1000] loss=0.0610 time=1.41s
+1299.7s 983 Epoch[970/1000] loss=0.0630 time=1.56s
+1301.0s 984 Epoch[971/1000] loss=0.0610 time=1.25s | [TEST] Recall@20=0.0052 Precision@20=0.0163 NDCG@20=0.0163
+1302.3s 985 Epoch[972/1000] loss=0.0626 time=1.33s
+1303.7s 986 Epoch[973/1000] loss=0.0628 time=1.35s
+1305.1s 987 Epoch[974/1000] loss=0.0621 time=1.37s
+1306.3s 988 Epoch[975/1000] loss=0.0622 time=1.21s
+1307.5s 989 Epoch[976/1000] loss=0.0621 time=1.17s
+1308.6s 990 Epoch[977/1000] loss=0.0612 time=1.11s
+1309.8s 991 Epoch[978/1000] loss=0.0625 time=1.26s
+1311.1s 992 Epoch[979/1000] loss=0.0620 time=1.22s
+1312.2s 993 Epoch[980/1000] loss=0.0619 time=1.13s
+1313.3s 994 Epoch[981/1000] loss=0.0636 time=1.08s | [TEST] Recall@20=0.0052 Precision@20=0.0163 NDCG@20=0.0163
+1314.4s 995 Epoch[982/1000] loss=0.0596 time=1.07s
+1315.5s 996 Epoch[983/1000] loss=0.0615 time=1.08s
+1316.7s 997 Epoch[984/1000] loss=0.0624 time=1.24s
+1317.8s 998 Epoch[985/1000] loss=0.0605 time=1.13s
+1319.1s 999 Epoch[986/1000] loss=0.0633 time=1.24s
+1320.2s 1000 Epoch[987/1000] loss=0.0656 time=1.18s
+1321.5s 1001 Epoch[988/1000] loss=0.0610 time=1.28s
+1322.7s 1002 Epoch[989/1000] loss=0.0618 time=1.22s
+1324.0s 1003 Epoch[990/1000] loss=0.0609 time=1.26s
+1325.3s 1004 Epoch[991/1000] loss=0.0647 time=1.28s | [TEST] Recall@20=0.0053 Precision@20=0.0168 NDCG@20=0.0162
+1326.7s 1005 Epoch[992/1000] loss=0.0620 time=1.35s
+1327.9s 1006 Epoch[993/1000] loss=0.0623 time=1.25s
+1329.2s 1007 Epoch[994/1000] loss=0.0612 time=1.28s
+1330.6s 1008 Epoch[995/1000] loss=0.0600 time=1.34s
+1331.9s 1009 Epoch[996/1000] loss=0.0616 time=1.37s
+1333.1s 1010 Epoch[997/1000] loss=0.0607 time=1.23s
+1334.5s 1011 Epoch[998/1000] loss=0.0612 time=1.40s
+1335.7s 1012 Epoch[999/1000] loss=0.0625 time=1.12s
+1336.7s 1013 Epoch[1000/1000] loss=0.0621 time=1.13s | [TEST] Recall@20=0.0051 Precision@20=0.0158 NDCG@20=0.0153
+1336.7s 1014 Da luu checkpoint: lightgcn_th4_5.pt
+1341.3s 1015 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+1341.3s 1016 cells[i][c] = re.sub('\\\\\|', '|', cell)
+1341.6s 1017 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+1341.6s 1018 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+1342.3s 1019 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+1342.8s 1020 [NbConvertApp] Writing 69270 bytes to __notebook__.ipynb
+1345.8s 1021 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+1346.9s 1022 [NbConvertApp] Writing 357222 bytes to __results__.html

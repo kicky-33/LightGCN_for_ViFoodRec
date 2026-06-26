@@ -1,0 +1,5 @@
+threshold,n_users,n_items,recall@20,precision@20,ndcg@20,checkpoint
+3.0,101,4001,0.0054,0.0441,0.0408,scripts/lightgcn_th3_0.pt
+3.5,101,4001,0.0073,0.048,0.0499,scripts/lightgcn_th3_5.pt
+4.0,101,3983,0.0059,0.0287,0.0282,scripts/lightgcn_th4_0.pt
+4.5,101,3709,0.0051,0.0158,0.0153,scripts/lightgcn_th4_5.pt
