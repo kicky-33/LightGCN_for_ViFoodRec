@@ -9,7 +9,7 @@ Phan tich 4 khia canh:
 
 Input can co:
     - DATA_DIR/train.txt, test.txt   (cua threshold=3.5)
-    - CKPT_PATH                      (checkpoint tot nhat, de nghi seed=2026)
+    - CKPT_PATH                      (checkpoint tot nhat)
     - FOODS_CSV                      (foods.csv tu repo ViFoodRec)
     - FOOD_ID_MAP                    (foodid_map.csv tu preprocess_vifoodrec.py)
 
@@ -18,7 +18,7 @@ Output (trong OUTPUT_DIR):
     - error_analysis_usergroup.png
     - error_analysis_dishtype.png
     - case_study.csv                 (dua thang vao bao cao)
-    - error_analysis_summary.txt     (so lieu tong hop, copy vao phan 4.5)
+    - error_analysis_summary.txt     (so lieu tong hop)
 """
 
 import numpy as np
