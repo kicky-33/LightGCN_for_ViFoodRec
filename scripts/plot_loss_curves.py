@@ -20,7 +20,6 @@ CACH DUNG:
            python plot_loss_curves.py
 
     3. Output: outputs/figures/loss_curve_th{X_X}.png x4
-       (co the copy thang vao Word/LaTeX cho bao cao)
 
 GHI CHU: moi log file chi can CUNG 1 threshold (1 lan train). Neu th3_5 train
 3 seed, dung log cua seed chinh (2026) de ve bieu do — cac seed khac
