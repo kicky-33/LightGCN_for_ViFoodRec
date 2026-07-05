@@ -1,34 +1,23 @@
 """
-run_all_baselines.py
-=====================
 Train BPRMF / NGCF / LightGCN x 3 seed (2026, 42, 123) trên ViFoodRec,
 lưu predictions để longtail_analysis.py dùng tính Head/Body/Tail Recall@20.
 
-Logic giữ nguyên theo yêu cầu:
+Logic giữ nguyên:
   - BPRMF, NGCF : y hệt model.py / data.py / losses.py / evaluate.py trong
     lightgcn_baseline (không đổi gì cả).
-  - LightGCN    : y hệt train_lightgcn_pyg.py trong notebook train-light-repo
+  - LightGCN    : y hệt train_lightgcn_pyg.py
     (torch_geometric.nn.models.LightGCN, công thức Recall/NDCG copy nguyên
     từ gusye1234/LightGCN-PyTorch). Chỉ thêm early-stopping + lưu best
-    checkpoint (giống 2 baseline kia) để 3 model so sánh công bằng, vì bản
-    notebook gốc chỉ train đủ N_EPOCHS rồi lưu checkpoint cuối.
+    checkpoint (giống 2 baseline kia) để 3 model so sánh công bằng.
   - Lưu predictions: dùng đúng logic save_predictions() của train.py
     (mask train items, top-K, lưu dict {user: np.array} vào .npy) cho cả
     3 model.
 
-QUY ƯỚC PATH ĐÃ THỐNG NHẤT (khác bản gốc, cập nhật sau khi gộp code):
+QUY ƯỚC PATH ĐÃ THỐNG NHẤT:
   - Checkpoint : checkpoints/{model}_th{threshold}_seed{seed}.pt
-                 (bỏ tiền tố "best_", bỏ path Kaggle tuyệt đối)
   - Predictions: outputs/predictions/{model}_th{threshold}_seed{seed}.npy
-                 (chuyển ra ngoài outputs/, không còn nằm trong checkpoints/predictions/)
   - Data       : data/processed/experiments/th{threshold}/{train,test}.txt
-                 (bản gốc trỏ nhầm sang data/raw/train.txt — file đó không tồn tại,
-                 dữ liệu train/test thực tế do preprocess_vifoodrec.py sinh ra ở
-                 data/processed/experiments/)
-  ⚠️ Nếu bạn có longtail_analysis.py đọc theo path/tên file CŨ
-  (checkpoints/predictions/predictions_<model>_vifoodrec_seed<seed>.npy),
-  cần cập nhật lại theo 2 quy ước path ở trên — gửi file đó để rà soát thêm.
-
+  
 Giả định (chỉnh lại ở phần CONFIG nếu khác):
   - Dataset dùng chung cho cả 3 model, threshold=3.5 mặc định (đổi biến
     THRESHOLD ở CONFIG nếu muốn chạy threshold khác) — để đảm bảo so sánh
@@ -63,11 +52,11 @@ from torch_geometric.nn.models import LightGCN as PyGLightGCN
 # CONFIG chung
 # ============================================================
 DATASET = "vifoodrec"
-THRESHOLD = "3.5"  # phải khớp thư mục đã tiền xử lý trong data/processed/experiments/
+THRESHOLD = "3.5" 
 _TH_DIR = f"th{THRESHOLD.replace('.', '_')}"
 TRAIN_PATH = f"data/processed/experiments/{_TH_DIR}/train.txt"
 TEST_PATH = f"data/processed/experiments/{_TH_DIR}/test.txt"
-SEEDS = [2026, 42, 123]  # giữ nguyên — KHÔNG đổi số seed ở đây
+SEEDS = [2026, 42, 123]  
 MODELS = ["bprmf", "ngcf", "lightgcn"]
 
 EMB_DIM = 64
@@ -363,7 +352,6 @@ def train_lightgcn(seed):
     t0 = time.time()
 
     # Thêm early-stopping + lưu best checkpoint (đồng bộ với BPRMF/NGCF) —
-    # notebook gốc chỉ train đủ N_EPOCHS rồi lưu checkpoint cuối cùng.
     for epoch in range(1, EPOCHS + 1):
         total_loss = 0.0
         for _ in range(n_batches):
