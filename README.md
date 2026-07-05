@@ -34,7 +34,7 @@ LightGCN_for_ViFoodRec/
 │   ├── train_lightgcn_pyg.py           # Train LightGCN (torch_geometric), lưu .pt + history .json
 │   ├── evaluate_checkpoint.py          # Đánh giá checkpoint LightGCN đã train, ghi CSV
 │   ├── evaluate_gowalla_checkpoint.py  # Đánh giá lại checkpoint Gowalla gốc (gusye1234), không train lại
-│   ├── summarize_seeds.py              # Tổng hợp mean±std qua nhiều seed
+│   ├── summarize_seeds.py              # Tổng hợp mean±std qua nhiều seed trên LightGCN
 │   ├── plot_loss_curves.py             # Parse Kaggle log → vẽ biểu đồ loss & metric
 │   ├── error_analysis.py               # User group, dish type, case study
 │   ├── longtail_analysis.py            # Long-tail Head/Body/Tail cho cả 3 model × seed
