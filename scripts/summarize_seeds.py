@@ -1,6 +1,5 @@
 """
 Tong hop ket qua 3 seed cua threshold 3.5 -> tinh mean +/- std
-de dua vao bao cao (Table chinh thuc, phan 4.3.4).
 
 Cach dung:
     1. Train 3 lan voi cung DATA_DIR=data/th3_5 nhung khac SEED:
@@ -13,7 +12,7 @@ Cach dung:
            python summarize_seeds.py
 
 Output:
-    - In bang mean +/- std ra console (copy thang vao bao cao)
+    - In bang mean +/- std ra console
     - Ghi file outputs/results/final_result_th3_5.csv
 """
 
