@@ -1,8 +1,8 @@
 """
 Train LightGCN tren ViFoodRec dung THU VIEN torch_geometric.nn.models.LightGCN
--> KHONG can clone/patch repo gusye1234/LightGCN-PyTorch, phu hop chay tren Kaggle.
+-> KHONG can clone/patch repo gusye1234/LightGCN-PyTorch.
 
-Cai dat (1 lenh, nhe, khong dinh ray/pyarrow nhu RecBole):
+Cai dat:
     pip install torch_geometric
 
 QUAN TRONG VE TINH NHAT QUAN:
@@ -10,12 +10,8 @@ QUAN TRONG VE TINH NHAT QUAN:
     tu gusye1234/LightGCN-PyTorch/code/utils.py (repo da dung de tai hien baseline
     Gowalla) -> dam bao Recall@20/NDCG@20/Precision@20 tinh ra co the so sanh truc
     tiep voi so lieu baseline Gowalla da co, du model duoc khoi tao bang thu vien khac.
-    Can ghi ro trong bao cao: "phan ViFoodRec dung torch_geometric.nn.models.LightGCN
-    (cung mot cong thuc LightGCN/BPR loss theo dung paper goc), trong khi baseline
-    Gowalla dung code goc cua gusye1234 - ly do thuc tien (de trien khai tren Kaggle),
-    khong anh huong tinh hop le vi ca hai deu cai dat dung kien truc trong paper."
 
-Cau hinh mac dinh KHOP voi CONFIG da thong nhat trong plan_preprocessing.md:
+Cau hinh mac dinh:
     EMBEDDING_DIM=64, N_LAYERS=3, LR=0.001, DECAY=1e-4, BATCH_SIZE=1024
 """
 
@@ -32,7 +28,7 @@ _parser.add_argument("--data-dir", default="data/processed/experiments/th3_5")
 _parser.add_argument("--seed", type=int, default=42)
 _cli, _ = _parser.parse_known_args()
 
-# ===================== CONFIG (chinh o day, hoac truyen --data-dir/--seed) =====================
+# ===================== CONFIG =====================
 DATA_DIR = _cli.data_dir  # thu muc chua train.txt/test.txt CUA 1 THRESHOLD
 EMBEDDING_DIM = 64
 N_LAYERS = 3
