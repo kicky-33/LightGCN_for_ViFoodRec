@@ -113,6 +113,3 @@ class InteractionData:
             torch.LongTensor(neg_items),
         )
 
-
-# Alias để tương thích ngược nếu còn notebook/script cũ import tên YelpData
-YelpData = InteractionData
