@@ -3,12 +3,9 @@ config.py — Cấu hình dùng chung cho BPR-MF / NGCF trên ViFoodRec.
 
 Có thể override qua CLI, ví dụ:
     python train.py --model bprmf --threshold 3.5 --seed 42
-    python train.py --model lightgcn --threshold 4.0 --seed 2026
-
+    
 Quy ước checkpoint thống nhất toàn repo:
     checkpoints/{model}_th{threshold}_seed{seed}.pt
-    (không tiền tố "best_", không path tuyệt đối Kaggle — path luôn tương đối so
-    với thư mục gốc repo để chạy được trên mọi máy/mọi môi trường)
 """
 
 import argparse
