@@ -139,7 +139,7 @@ def evaluate_one(ckpt_path, train_pos, test_pos, num_users, num_items):
 
 
 def main():
-    data_dir = Path(DATA_DIR)
+    data_dir = "data/processed/experiments/th3_5"
     train_pos, n_user_tr, n_item_tr = load_interactions(data_dir / "train.txt")
     test_pos, n_user_te, n_item_te = load_interactions(data_dir / "test.txt")
     num_users = max(n_user_tr, n_user_te)

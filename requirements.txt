@@ -1,1 +1,21 @@
-pip install torch torchvision torchaudio
+# Core ML
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# PyTorch Geometric
+torch-geometric>=2.3.0
+torch-scatter>=2.1.0
+torch-sparse>=0.6.17
+
+# Data & Numerical
+numpy>=1.24.0
+pandas>=1.5.0
+scipy>=1.10.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Utilities
+tqdm>=4.65.0

@@ -1,0 +1,22 @@
+=== ERROR ANALYSIS SUMMARY — LightGCN ViFoodRec (th=3.5, seed=123) ===
+
+=== 1. LONG-TAIL ANALYSIS ===
+Phan loai: Head=top 20% pho bien (800 items), Body=60% (2400 items), Tail=bottom 20% (801 items)
+  Head (top 20%): Recall@20=0.0217
+  Body (60%): Recall@20=0.0025
+  Tail (bottom 20%): Recall@20=0.0
+
+=== 2. USER GROUP ANALYSIS ===
+Median interactions per user (train) = 519
+Active users (>= 519): n=51, Recall@20=0.0055, NDCG@20=0.0396
+Less-active users (< 519): n=50, Recall@20=0.0057, NDCG@20=0.0343
+
+=== 3. DISH TYPE ANALYSIS ===
+Mon man (3805 items in map): Recall@20=0.0057
+Mon chay (195 items in map): Recall@20=0.0046
+
+=== 4. CASE STUDY ===
+Chi tiet xem file: outputs\error_analysis\seed123\case_study.csv
+  Active — Recall cao: user=1, n_train=548, Recall@20=0.0221
+  Active — Recall thap: user=100, n_train=522, Recall@20=0.0000
+  Less-active: user=29, n_train=517, Recall@20=0.0078

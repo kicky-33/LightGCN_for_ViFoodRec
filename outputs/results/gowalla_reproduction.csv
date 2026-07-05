@@ -1,0 +1,4 @@
+metric,reproduced,paper,diff_pct
+recall@20,0.182014,0.183,-0.5389
+ndcg@20,0.155377,0.1557,-0.2074
+precision@20,0.056186,0.0561,0.1532

@@ -31,6 +31,7 @@ import re
 import json
 from pathlib import Path
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
@@ -73,8 +74,9 @@ def parse_log(path):
     return epochs, losses, test_epochs, recalls, ndcgs
 
 
-def plot_one(ax_loss, ax_metric, threshold, epochs, losses,
-             test_epochs, recalls, ndcgs):
+def plot_one(
+    ax_loss, ax_metric, threshold, epochs, losses, test_epochs, recalls, ndcgs
+):
     color_loss = "#378ADD"
     color_recall = "#1D9E75"
     color_ndcg = "#D85A30"
@@ -89,12 +91,25 @@ def plot_one(ax_loss, ax_metric, threshold, epochs, losses,
     ax_loss.grid(axis="y", linestyle="--", linewidth=0.4, alpha=0.5)
 
     if test_epochs:
-        ax_metric.plot(test_epochs, recalls, color=color_recall,
-                       linewidth=1.3, marker="o", markersize=2.5,
-                       label=f"Recall@{TOPK}")
-        ax_metric.plot(test_epochs, ndcgs, color=color_ndcg,
-                       linewidth=1.3, marker="s", markersize=2.5,
-                       linestyle="--", label=f"NDCG@{TOPK}")
+        ax_metric.plot(
+            test_epochs,
+            recalls,
+            color=color_recall,
+            linewidth=1.3,
+            marker="o",
+            markersize=2.5,
+            label=f"Recall@{TOPK}",
+        )
+        ax_metric.plot(
+            test_epochs,
+            ndcgs,
+            color=color_ndcg,
+            linewidth=1.3,
+            marker="s",
+            markersize=2.5,
+            linestyle="--",
+            label=f"NDCG@{TOPK}",
+        )
         ax_metric.set_ylabel("Metric", fontsize=9)
         ax_metric.tick_params(axis="y", labelsize=8)
         ax_metric.tick_params(axis="x", labelsize=8)
@@ -102,14 +117,21 @@ def plot_one(ax_loss, ax_metric, threshold, epochs, losses,
         ax_metric.grid(axis="y", linestyle="--", linewidth=0.4, alpha=0.5)
         # Danh dau gia tri tot nhat
         best_idx = recalls.index(max(recalls))
-        ax_metric.axvline(test_epochs[best_idx], color=color_recall,
-                          linestyle=":", linewidth=0.8, alpha=0.7)
+        ax_metric.axvline(
+            test_epochs[best_idx],
+            color=color_recall,
+            linestyle=":",
+            linewidth=0.8,
+            alpha=0.7,
+        )
         ax_metric.annotate(
             f"best Recall\n@ep{test_epochs[best_idx]}\n={max(recalls):.4f}",
             xy=(test_epochs[best_idx], max(recalls)),
-            xytext=(8, -18), textcoords="offset points",
-            fontsize=6.5, color=color_recall,
-            arrowprops=dict(arrowstyle="->", color=color_recall, lw=0.8)
+            xytext=(8, -18),
+            textcoords="offset points",
+            fontsize=6.5,
+            color=color_recall,
+            arrowprops=dict(arrowstyle="->", color=color_recall, lw=0.8),
         )
 
 
@@ -124,28 +146,35 @@ def main():
 
         epochs, losses, test_epochs, recalls, ndcgs = parse_log(p)
         if not epochs:
-            print(f"[!] Khong parse duoc dong nao tu {log_path} — kiem tra format file.")
+            print(
+                f"[!] Khong parse duoc dong nao tu {log_path} — kiem tra format file."
+            )
             continue
 
-        print(f"[OK] threshold={threshold}: {len(epochs)} epoch, "
-              f"{len(test_epochs)} diem TEST, "
-              f"loss cuoi={losses[-1]:.4f}" +
-              (f", best Recall={max(recalls):.4f}" if recalls else ""))
+        print(
+            f"[OK] threshold={threshold}: {len(epochs)} epoch, "
+            f"{len(test_epochs)} diem TEST, "
+            f"loss cuoi={losses[-1]:.4f}"
+            + (f", best Recall={max(recalls):.4f}" if recalls else "")
+        )
 
         fig, (ax_loss, ax_metric) = plt.subplots(
-            2, 1, figsize=(7, 5), sharex=True,
-            gridspec_kw={"height_ratios": [1.4, 1], "hspace": 0.08}
+            2,
+            1,
+            figsize=(7, 5),
+            sharex=True,
+            gridspec_kw={"height_ratios": [1.4, 1], "hspace": 0.08},
         )
         fig.patch.set_facecolor("white")
         ax_loss.set_facecolor("#FAFAFA")
         ax_metric.set_facecolor("#FAFAFA")
 
-        plot_one(ax_loss, ax_metric, threshold,
-                 epochs, losses, test_epochs, recalls, ndcgs)
+        plot_one(
+            ax_loss, ax_metric, threshold, epochs, losses, test_epochs, recalls, ndcgs
+        )
 
         fig.suptitle(
-            f"LightGCN — ViFoodRec  (threshold={threshold})",
-            fontsize=11, y=1.01
+            f"LightGCN — ViFoodRec  (threshold={threshold})", fontsize=11, y=1.01
         )
         out_path = OUT_DIR / f"loss_curve_th{threshold.replace('.', '_')}.png"
         fig.savefig(out_path, dpi=180, bbox_inches="tight", facecolor="white")
@@ -158,9 +187,10 @@ def main():
     ]
     if len(thresholds_found) >= 2:
         fig, axes = plt.subplots(
-            len(thresholds_found), 2,
+            len(thresholds_found),
+            2,
             figsize=(12, 3.5 * len(thresholds_found)),
-            gridspec_kw={"hspace": 0.45, "wspace": 0.3}
+            gridspec_kw={"hspace": 0.45, "wspace": 0.3},
         )
         fig.patch.set_facecolor("white")
         if len(thresholds_found) == 1:
@@ -171,12 +201,12 @@ def main():
             ax_loss, ax_metric = axes[i][0], axes[i][1]
             ax_loss.set_facecolor("#FAFAFA")
             ax_metric.set_facecolor("#FAFAFA")
-            plot_one(ax_loss, ax_metric, th,
-                     epochs, losses, test_epochs, recalls, ndcgs)
+            plot_one(
+                ax_loss, ax_metric, th, epochs, losses, test_epochs, recalls, ndcgs
+            )
 
         fig.suptitle(
-            "LightGCN — ViFoodRec: So sanh 4 threshold binarize",
-            fontsize=12, y=1.01
+            "LightGCN — ViFoodRec: So sanh 4 threshold binarize", fontsize=12, y=1.01
         )
         combined_path = OUT_DIR / "loss_curves_all_thresholds.png"
         fig.savefig(combined_path, dpi=180, bbox_inches="tight", facecolor="white")

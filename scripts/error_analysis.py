@@ -32,11 +32,14 @@ from pathlib import Path
 from torch_geometric.nn.models import LightGCN
 
 # ===================== CONFIG =====================
+seed = 2026
 DATA_DIR = "data/processed/experiments/th3_5"
-CKPT_PATH = "checkpoints/lightgcn_th3_5_seed2026.pt"
+CKPT_PATH = f"checkpoints/lightgcn_th3_5_seed{seed}.pt"
 FOODS_CSV = "data/raw/foods.csv"
 FOOD_ID_MAP = "data/processed/experiments/th3_5/foodid_map.csv"
-OUTPUT_DIR = Path("outputs/error_analysis")
+# Khớp cấu trúc thư mục đã chốt trong README: outputs/error_analysis/
+# (tách theo seed bằng subfolder để không ghi đè giữa các lần chạy)
+OUTPUT_DIR = Path("outputs/error_analysis") / f"seed{seed}"
 TOPK = 20
 EMBEDDING_DIM = 64
 N_LAYERS = 3
@@ -427,7 +430,7 @@ def main():
 
     summary_lines += [
         "\n=== 4. CASE STUDY ===",
-        f"Chi tiet xem file: outputs/error_analysis/case_study.csv",
+        f"Chi tiet xem file: {case_path}",
     ] + [
         f"  {role}: user={u}, n_train={user_activity.get(u,0)}, "
         f"Recall@{TOPK}={user_recalls[u]:.4f}"
@@ -437,7 +440,7 @@ def main():
     # ---------- Ghi summary ----------
     summary_path = OUTPUT_DIR / "error_analysis_summary.txt"
     summary_path.write_text(
-        "=== ERROR ANALYSIS SUMMARY — LightGCN ViFoodRec (th=3.5, seed=2026) ===\n"
+        f"=== ERROR ANALYSIS SUMMARY — LightGCN ViFoodRec (th=3.5, seed={seed}) ===\n"
         + "\n".join(summary_lines)
         + "\n",
         encoding="utf-8",

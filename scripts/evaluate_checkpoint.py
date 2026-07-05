@@ -1,42 +1,103 @@
 """
-Danh gia 1 checkpoint LightGCN da train (.pt) tren tap test, KHONG train lai.
-
-LY DO CAN SCRIPT NAY: checkpoint .pt chi luu trong so model (state_dict),
-KHONG luu Recall@20/NDCG@20/Precision@20 da in ra console luc train.
--> Neu khong con log console, dung script nay de tinh lai metric tu checkpoint.
-
-Cach dung:
-    Sua CKPT_PATH va DATA_DIR ben duoi roi chay:
-        python evaluate_checkpoint.py
-    Hoac chay nhieu threshold lien tiep bang vong lap shell (xem huong dan o cuoi file).
-
-Ket qua duoc APPEND vao outputs/results/threshold_ablation_results.csv
-(khong ghi de, moi lan chay them 1 dong) de tong hop dan ca 4 threshold.
+Danh gia 12 checkpoint (4 threshold x 3 seed) trong 1 lan chay.
+Output: outputs/results/threshold_ablation_results.csv  (tung dong per checkpoint)
+        outputs/results/threshold_ablation_summary.csv  (mean+-std per threshold)
 """
 
 import csv
-from pathlib import Path
-
 import numpy as np
 import torch
+from pathlib import Path
 from torch_geometric.nn.models import LightGCN
 
 # ===================== CONFIG =====================
-CKPT_PATH = "checkpoints/lightgcn_th4_5.pt"  # file checkpoint can danh gia
-DATA_DIR = "data/processed/experiments/th4_5"  # thu muc chua train.txt/test.txt TUONG UNG checkpoint nay
-THRESHOLD_LABEL = "4.5"  # ghi nhan threshold nao, de dien vao bang ket qua
 EMBEDDING_DIM = 64
 N_LAYERS = 3
 TOPK = 20
 RESULTS_CSV = "outputs/results/threshold_ablation_results.csv"
-# ====================================================
+SUMMARY_CSV = "outputs/results/threshold_ablation_summary.csv"
+
+CONFIGS = [
+    {
+        "threshold": "3.0",
+        "seed": 2026,
+        "ckpt": "checkpoints/lightgcn_th3_0_seed2026.pt",
+        "data": "data/processed/experiments/th3_0",
+    },
+    {
+        "threshold": "3.0",
+        "seed": 42,
+        "ckpt": "checkpoints/lightgcn_th3_0_seed42.pt",
+        "data": "data/processed/experiments/th3_0",
+    },
+    {
+        "threshold": "3.0",
+        "seed": 123,
+        "ckpt": "checkpoints/lightgcn_th3_0_seed123.pt",
+        "data": "data/processed/experiments/th3_0",
+    },
+    {
+        "threshold": "3.5",
+        "seed": 2026,
+        "ckpt": "checkpoints/lightgcn_th3_5_seed2026.pt",
+        "data": "data/processed/experiments/th3_5",
+    },
+    {
+        "threshold": "3.5",
+        "seed": 42,
+        "ckpt": "checkpoints/lightgcn_th3_5_seed42.pt",
+        "data": "data/processed/experiments/th3_5",
+    },
+    {
+        "threshold": "3.5",
+        "seed": 123,
+        "ckpt": "checkpoints/lightgcn_th3_5_seed123.pt",
+        "data": "data/processed/experiments/th3_5",
+    },
+    {
+        "threshold": "4.0",
+        "seed": 2026,
+        "ckpt": "checkpoints/lightgcn_th4_0_seed2026.pt",
+        "data": "data/processed/experiments/th4_0",
+    },
+    {
+        "threshold": "4.0",
+        "seed": 42,
+        "ckpt": "checkpoints/lightgcn_th4_0_seed42.pt",
+        "data": "data/processed/experiments/th4_0",
+    },
+    {
+        "threshold": "4.0",
+        "seed": 123,
+        "ckpt": "checkpoints/lightgcn_th4_0_seed123.pt",
+        "data": "data/processed/experiments/th4_0",
+    },
+    {
+        "threshold": "4.5",
+        "seed": 2026,
+        "ckpt": "checkpoints/lightgcn_th4_5_seed2026.pt",
+        "data": "data/processed/experiments/th4_5",
+    },
+    {
+        "threshold": "4.5",
+        "seed": 42,
+        "ckpt": "checkpoints/lightgcn_th4_5_seed42.pt",
+        "data": "data/processed/experiments/th4_5",
+    },
+    {
+        "threshold": "4.5",
+        "seed": 123,
+        "ckpt": "checkpoints/lightgcn_th4_5_seed123.pt",
+        "data": "data/processed/experiments/th4_5",
+    },
+]
+# ==================================================
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 def load_interactions(path):
-    data = {}
-    n_user, n_item = 0, 0
+    data, n_user, n_item = {}, 0, 0
     with open(path) as f:
         for line in f:
             if not line.strip():
@@ -52,7 +113,6 @@ def load_interactions(path):
     return data, n_user + 1, n_item + 1
 
 
-# ---------- Metric - copy nguyen tu gusye1234/LightGCN-PyTorch/code/utils.py (giong train script) ----------
 def RecallPrecision_ATk(test_data, r, k):
     right_pred = r[:, :k].sum(1)
     recall_n = np.array([len(test_data[i]) for i in range(len(test_data))])
@@ -68,7 +128,7 @@ def NDCGatK_r(test_data, r, k):
         length = k if k <= len(items) else len(items)
         test_matrix[i, :length] = 1
     idcg = np.sum(test_matrix * 1.0 / np.log2(np.arange(2, k + 2)), axis=1)
-    dcg = np.sum(pred_data * (1.0 / np.log2(np.arange(2, k + 2))), axis=1)
+    dcg = np.sum(pred_data * 1.0 / np.log2(np.arange(2, k + 2)), axis=1)
     idcg[idcg == 0.0] = 1.0
     ndcg = dcg / idcg
     ndcg[np.isnan(ndcg)] = 0.0
@@ -78,36 +138,38 @@ def NDCGatK_r(test_data, r, k):
 def getLabel(test_data, pred_data):
     r = []
     for i in range(len(test_data)):
-        groundTrue = test_data[i]
-        predictTopK = pred_data[i]
-        pred = list(map(lambda x: x in groundTrue, predictTopK))
+        pred = list(map(lambda x: x in test_data[i], pred_data[i]))
         r.append(np.array(pred).astype("float"))
     return np.array(r)
 
 
-def main():
-    data_dir = Path(DATA_DIR)
-    train_pos, n_user_tr, n_item_tr = load_interactions(data_dir / "train.txt")
-    test_pos, n_user_te, n_item_te = load_interactions(data_dir / "test.txt")
-    num_users = max(n_user_tr, n_user_te)
-    num_items = max(n_item_tr, n_item_te)
+def evaluate_one(cfg, data_cache):
+    ckpt_path = Path(cfg["ckpt"])
+    if not ckpt_path.exists():
+        print(f"  [SKIP] Chua co: {ckpt_path}")
+        return None
+
+    data_dir = cfg["data"]
+    if data_dir not in data_cache:
+        train_pos, nu_tr, ni_tr = load_interactions(Path(data_dir) / "train.txt")
+        test_pos, nu_te, ni_te = load_interactions(Path(data_dir) / "test.txt")
+        num_users = max(nu_tr, nu_te)
+        num_items = max(ni_tr, ni_te)
+        data_cache[data_dir] = (train_pos, test_pos, num_users, num_items)
+
+    train_pos, test_pos, num_users, num_items = data_cache[data_dir]
     num_nodes = num_users + num_items
 
-    # ---------- Doi chieu checkpoint voi data truoc khi danh gia (tranh nham lan threshold) ----------
-    state_dict = torch.load(CKPT_PATH, map_location=DEVICE)
-    ckpt_num_nodes, ckpt_emb_dim = state_dict["embedding.weight"].shape
-    if ckpt_num_nodes != num_nodes:
+    state_dict = torch.load(ckpt_path, map_location=DEVICE, weights_only=True)
+    ckpt_nodes = state_dict["embedding.weight"].shape[0]
+    if ckpt_nodes != num_nodes:
         raise ValueError(
-            f"[!] Checkpoint co num_nodes={ckpt_num_nodes} nhung data o {DATA_DIR} "
-            f"cho num_nodes={num_nodes} (users={num_users}, items={num_items}). "
-            f"Kiem tra lai ban da tro dung CKPT_PATH/DATA_DIR cua CUNG 1 threshold chua."
+            f"[!] {ckpt_path.name}: num_nodes={ckpt_nodes} "
+            f"!= data num_nodes={num_nodes}. Kiem tra lai cap ckpt/data."
         )
-    print(
-        f"[OK] Checkpoint khop voi data: num_nodes={num_nodes} (users={num_users}, items={num_items})"
-    )
 
     model = LightGCN(
-        num_nodes=num_nodes, embedding_dim=ckpt_emb_dim, num_layers=N_LAYERS
+        num_nodes=num_nodes, embedding_dim=EMBEDDING_DIM, num_layers=N_LAYERS
     ).to(DEVICE)
     model.load_state_dict(state_dict)
     model.eval()
@@ -128,75 +190,129 @@ def main():
     with torch.no_grad():
         out = model.get_embedding(edge_index)
         user_emb, item_emb = out[:num_users], out[num_users:]
-        test_users = list(test_pos.keys())
         groundtruth, topk_items = [], []
-        for u in test_users:
+        for u in test_pos:
             scores = (user_emb[u] @ item_emb.T).clone()
             if u in train_pos:
                 scores[train_pos[u]] = -1e10
             topk = torch.topk(scores, TOPK).indices.cpu().numpy()
             topk_items.append(topk)
             groundtruth.append(test_pos[u])
-        r = getLabel(groundtruth, topk_items)
-        recall, precision = RecallPrecision_ATk(groundtruth, r, TOPK)
-        ndcg = NDCGatK_r(groundtruth, r, TOPK)
-        n = len(test_users)
-        recall, precision, ndcg = recall / n, precision / n, ndcg / n
 
+    r = getLabel(groundtruth, topk_items)
+    recall, precision = RecallPrecision_ATk(groundtruth, r, TOPK)
+    ndcg = NDCGatK_r(groundtruth, r, TOPK)
+    n = len(test_pos)
+    return round(recall / n, 6), round(precision / n, 6), round(ndcg / n, 6)
+
+
+def main():
+    Path(RESULTS_CSV).parent.mkdir(parents=True, exist_ok=True)
+
+    rows = []
+    data_cache = {}
+
+    print(f"Device: {DEVICE}")
     print(
-        f"[RESULT] threshold={THRESHOLD_LABEL} | Recall@{TOPK}={recall:.4f} "
-        f"Precision@{TOPK}={precision:.4f} NDCG@{TOPK}={ndcg:.4f}"
+        f"{'Threshold':>10} {'Seed':>6} {'Recall':>8} {'Prec':>8} {'NDCG':>8}  Checkpoint"
     )
 
-    out_path = Path(RESULTS_CSV)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    write_header = not out_path.exists()
-    with open(out_path, "a", newline="") as f:
+    with open(RESULTS_CSV, "w", newline="") as f:
         writer = csv.writer(f)
-        if write_header:
-            writer.writerow(
-                [
-                    "threshold",
-                    "n_users",
-                    "n_items",
-                    f"recall@{TOPK}",
-                    f"precision@{TOPK}",
-                    f"ndcg@{TOPK}",
-                    "checkpoint",
-                ]
-            )
         writer.writerow(
             [
-                THRESHOLD_LABEL,
-                num_users,
-                num_items,
-                round(recall, 4),
-                round(precision, 4),
-                round(ndcg, 4),
-                CKPT_PATH,
+                "threshold",
+                "seed",
+                "n_users",
+                "n_items",
+                f"recall@{TOPK}",
+                f"precision@{TOPK}",
+                f"ndcg@{TOPK}",
+                "checkpoint",
             ]
         )
-    print(f"Da ghi vao {out_path}")
+
+        for cfg in CONFIGS:
+            result = evaluate_one(cfg, data_cache)
+            if result is None:
+                continue
+            recall, precision, ndcg = result
+            th, seed = cfg["threshold"], cfg["seed"]
+            _, _, num_users, num_items = data_cache[cfg["data"]]
+
+            print(
+                f"{th:>10} {seed:>6} {recall:>8.4f} {precision:>8.4f} {ndcg:>8.4f}  {Path(cfg['ckpt']).name}"
+            )
+            writer.writerow(
+                [th, seed, num_users, num_items, recall, precision, ndcg, cfg["ckpt"]]
+            )
+            rows.append(
+                {
+                    "threshold": th,
+                    "recall": recall,
+                    "precision": precision,
+                    "ndcg": ndcg,
+                }
+            )
+
+    # mean+-std per threshold
+    from collections import defaultdict
+
+    by_th = defaultdict(list)
+    for r in rows:
+        by_th[r["threshold"]].append(r)
+
+    print(f"\n{'':=<70}")
+    print(
+        f"{'Threshold':>10} {'n_seeds':>8} {'Recall (mean+-std)':>22} {'NDCG (mean+-std)':>22}"
+    )
+    print(f"{'':=<70}")
+
+    with open(SUMMARY_CSV, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(
+            [
+                "threshold",
+                "n_seeds",
+                "recall_mean",
+                "recall_std",
+                "ndcg_mean",
+                "ndcg_std",
+                "precision_mean",
+                "precision_std",
+            ]
+        )
+
+        for th in ["3.0", "3.5", "4.0", "4.5"]:
+            if th not in by_th:
+                continue
+            vals = by_th[th]
+            r_arr = np.array([v["recall"] for v in vals])
+            p_arr = np.array([v["precision"] for v in vals])
+            n_arr = np.array([v["ndcg"] for v in vals])
+            rm, rs = r_arr.mean(), r_arr.std()
+            pm, ps = p_arr.mean(), p_arr.std()
+            nm, ns = n_arr.mean(), n_arr.std()
+            print(
+                f"{th:>10} {len(vals):>8} "
+                f"{rm:.4f}+-{rs:.4f}        "
+                f"{nm:.4f}+-{ns:.4f}"
+            )
+            writer.writerow(
+                [
+                    th,
+                    len(vals),
+                    round(rm, 6),
+                    round(rs, 6),
+                    round(nm, 6),
+                    round(ns, 6),
+                    round(pm, 6),
+                    round(ps, 6),
+                ]
+            )
+
+    print(f"\nDa ghi:\n  {RESULTS_CSV}\n  {SUMMARY_CSV}")
 
 
 if __name__ == "__main__":
     main()
-
-# ---------------------------------------------------------------------------
-# Chay lien tiep ca 4 threshold (PowerShell, sua duong dan cho khop may ban):
-#
-#   $configs = @(
-#     @{th="3.0"; ckpt="lightgcn_th3_0.pt"; data="data/th3_0"},
-#     @{th="3.5"; ckpt="lightgcn_th3_5.pt"; data="data/th3_5"},
-#     @{th="4.0"; ckpt="lightgcn_th4_0.pt"; data="data/th4_0"},
-#     @{th="4.5"; ckpt="lightgcn_th4_5.pt"; data="data/th4_5"}
-#   )
-#   foreach ($c in $configs) {
-#     (Get-Content evaluate_checkpoint.py) `
-#       -replace 'CKPT_PATH = ".*"', "CKPT_PATH = `"$($c.ckpt)`"" `
-#       -replace 'DATA_DIR = ".*"', "DATA_DIR = `"$($c.data)`"" `
-#       -replace 'THRESHOLD_LABEL = ".*"', "THRESHOLD_LABEL = `"$($c.th)`"" `
-#       | Set-Content evaluate_checkpoint_tmp.py
-#     python evaluate_checkpoint_tmp.py
-#   }
-# ---------------------------------------------------------------------------
