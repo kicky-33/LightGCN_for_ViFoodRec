@@ -103,7 +103,7 @@ ratings.csv
     │  - K-core=5 filtering
     │  - Train/test split per-user (80/20, stratified theo số tương tác)
     │
-    ▼ train_lightgcn_pyg.py (LightGCN)  /  run_all_baselines.py (BPR-MF, NGCF, LightGCN)
+    ▼ train_lightgcn_pyg.py (LightGCN)  /  run_all_baselines.py (BPR-MF, NGCF, LightGCN)  /  train.py (BPR-MF, NGCF)
     │  - batch_size=1024 dùng chung cho cả 3 model
     │  - Tối đa 1000 epochs, ~22 phút/lần chạy (LightGCN, Kaggle T4)
     │  - Lưu checkpoint checkpoints/{model}_th{threshold}_seed{seed}.pt
@@ -111,7 +111,7 @@ ratings.csv
     ▼ evaluate_checkpoint.py / evaluate_gowalla_checkpoint.py / summarize_seeds.py
     │  - Recall@20, Precision@20, NDCG@20 (all-ranking protocol)
     │  - Ablation threshold & số lớp K: 3 seed → mean ± std
-    │  - Kết quả chính thức (so sánh 3 model): 5 seed → mean ± std
+    │  - Kết quả chính thức (so sánh 3 model): 5 seed → mean ± std (chỉ dùng 5 seed khi so sánh, nhằm tăng ý nghĩa thống kê)
     │
     ▼ error_analysis.py + longtail_analysis.py
        - Long-tail (3 model), User group (top/bottom 25%, 3 model), Dish type, Case study
