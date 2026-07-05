@@ -17,7 +17,7 @@ Output (trong OUTPUT_DIR):
     - error_analysis_longtail.png
     - error_analysis_usergroup.png
     - error_analysis_dishtype.png
-    - case_study.csv                 (dua thang vao bao cao)
+    - case_study.csv                 (dua vao bao cao)
     - error_analysis_summary.txt     (so lieu tong hop)
 """
 
@@ -446,7 +446,6 @@ def main():
         encoding="utf-8",
     )
     print(f"\n[Done] Tat ca ket qua o: {OUTPUT_DIR}/")
-    print("       Copy error_analysis_summary.txt vao phan 4.5 bao cao.")
 
 
 if __name__ == "__main__":
