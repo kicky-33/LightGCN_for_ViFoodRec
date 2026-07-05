@@ -52,10 +52,8 @@ def build_config(model: str, threshold: str, seed: int, resume: bool = True) -> 
         # Optimization
         "lr": 0.001,
         # batch_size = 1024 dùng chung cho cả BPR-MF / NGCF / LightGCN
-        # (khớp Mục "Siêu tham số" trong báo cáo — đã xác nhận đây là giá trị đúng,
-        # không phải 4096 như bản draft trước đó của config.py).
         "batch_size": 1024,
-        "reg_lambda": 1e-4,  # NGCF paper dùng 1e-4; LightGCN Yelp dùng 1e-3 (không áp dụng ở đây)
+        "reg_lambda": 1e-4,  # NGCF paper dùng 1e-4
         # Training
         "epochs": 1000,
         "eval_every": 20,
