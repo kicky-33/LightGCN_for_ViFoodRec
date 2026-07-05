@@ -131,7 +131,7 @@ ratings.csv
 
 Sai lệch **≤ 0.77%** so với paper gốc trên cả 3 metric — xác nhận cài đặt pipeline chính xác (RQ1). Có thể kiểm tra lại không cần train:
 ```bash
-python scripts/evaluate_gowalla_checkpoint.py --ckpt checkpoints/gowalla/lgn-gowalla-3-64.pth.tar --data-dir data/gowalla
+python scripts/evaluate_gowalla_checkpoint.py --ckpt checkpoints/gowalla/lgn-gowalla-3-64.pth.tar
 ```
 
 ### 2. Threshold Ablation — ViFoodRec (mean ± std, 3 seed)
