@@ -57,9 +57,9 @@ LightGCN_for_ViFoodRec/
 │
 └── outputs/
     ├── results/
-    │   ├── summary_all_thresholds.csv       # #users/#items/#interactions × 4 threshold
-    │   ├── threshold_ablation_results.csv   # Recall/NDCG/Precision × 4 threshold (3 seed)
-    │   ├── final_result_th3_5.csv           # mean±std, 5 seed — KẾT QUẢ CHÍNH THỨC (3 model)
+    │   ├── summary_all_thresholds.csv       # #users/#items/#interactions × 4 threshold (LightGCN)
+    │   ├── threshold_ablation_results.csv   # Recall/NDCG/Precision × 4 threshold (3 seed, LightGCN))
+    │   ├── final_result_th3_5.csv           # mean±std, 3 seed — KẾT QUẢ CHÍNH THỨC (LightGCN)
     │   └── gowalla_reproduction.csv         # Kết quả evaluate_gowalla_checkpoint.py
     │
     ├── predictions/
@@ -71,8 +71,10 @@ LightGCN_for_ViFoodRec/
     │   ├── error_analysis_usergroup.png
     │   └── error_analysis_dishtype.png
     │
-    └── error_analysis/
-        ├── case_study.csv
+    └── error_analysis/    # Mỗi thư mục seed{seed}/ có: case_study.csv, error_analysis_summary.txt, error_analysis_*.png
+        ├── seed42                          
+        ├── seed123
+        ├── seed2026
         ├── error_analysis_summary.txt
         └── longtail_per_seed.csv            # Ghi bởi longtail_analysis.py (3 model × seed)
 ```
